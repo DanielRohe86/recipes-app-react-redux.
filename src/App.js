@@ -4,7 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Provider from './context/Provider';
 import Login from './pages/Login';
-import Meal from './pages/Meal';
+import Meals from './pages/Meals';
+import Drinks from './pages/Drinks';
+import MealRecipe from './pages/MealRecipe';
+import MealRecipeInProgress from './pages/MealRecipeInProgress';
+import DrinkRecipe from './pages/DrinkRecipe';
+import DrinkRecipeInProgress from './pages/DrinkRecipeInProgress';
+import Profile from './pages/Profile';
+import DoneRecipes from './pages/DoneRecipes';
+import FavoriteRecipes from './pages/FavoriteRecipes';
 
 function App() {
   return (
@@ -18,8 +26,48 @@ function App() {
           />
           <Route
             exact
-            path="/meal"
-            render={ (props) => <Meal { ...props } /> }
+            path="/meals"
+            render={ (props) => <Meals { ...props } /> }
+          />
+          <Route
+            exact
+            path="/meals/:id"
+            render={ (props) => <MealRecipe { ...props } /> }
+          />
+          <Route
+            exact
+            path="/meals/:id/in-progress"
+            render={ (props) => <MealRecipeInProgress { ...props } /> }
+          />
+          <Route
+            exact
+            path="/drinks"
+            render={ (props) => <Drinks { ...props } /> }
+          />
+          <Route
+            exact
+            path="/drinks/:id"
+            render={ (props) => <DrinkRecipe { ...props } /> }
+          />
+          <Route
+            exact
+            path="/drinks/:id/in-progress"
+            render={ (props) => <DrinkRecipeInProgress { ...props } /> }
+          />
+          <Route
+            exact
+            path="/profile"
+            render={ (props) => <Profile { ...props } /> }
+          />
+          <Route
+            exact
+            path="/done-recipes"
+            render={ (props) => <DoneRecipes { ...props } /> }
+          />
+          <Route
+            exact
+            path="/favorite-recipes"
+            render={ (props) => <FavoriteRecipes { ...props } /> }
           />
         </Switch>
       </Provider>
