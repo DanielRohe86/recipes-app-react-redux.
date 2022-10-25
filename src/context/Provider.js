@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import MyContext from './MyContext';
 
 function Provider({ children }) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(['', '']);
 
   const fetchSearchAPI = async (nameFilter, radioFilter, apiType = 'meal') => {
     let URL = '';
@@ -35,6 +35,7 @@ function Provider({ children }) {
 
   const contextValue = useMemo(() => ({
     fetchSearchAPI,
+    setData,
     data,
   }), [data]);
 
