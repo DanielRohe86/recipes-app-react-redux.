@@ -5,7 +5,12 @@ import profileIcon from '../images/profileIcon.svg';
 import searchIcon from '../images/searchIcon.svg';
 import SearchBar from './SearchBar';
 
-function Header({ title, hasSearchIcon = true, hasProfileIcon = true }) {
+function Header({
+  title,
+  hasSearchIcon = true,
+  hasProfileIcon = true,
+  apiType = 'meal',
+}) {
   const [searchInput, setSearchInput] = useState(false);
   return (
     <header>
@@ -38,7 +43,7 @@ function Header({ title, hasSearchIcon = true, hasProfileIcon = true }) {
 
       {
         (searchInput) && (
-          <SearchBar />
+          <SearchBar apiType={ apiType } />
         )
       }
 
@@ -55,6 +60,7 @@ Header.propTypes = {
   hasProfileIcon: PropTypes.bool,
   hasSearchIcon: PropTypes.bool,
   title: PropTypes.string,
+  apiType: PropTypes.string,
 }.isRequired;
 
 export default Header;

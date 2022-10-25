@@ -1,10 +1,39 @@
 import PropTypes from 'prop-types';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import MyContext from './MyContext';
 
 function Provider({ children }) {
+  const [data, setData] = useState([]);
+
+  const fetchSearchAPI = async (nameFilter, radioFilter, apiType) => {
+    let URL = '';
+    if (radioFilter === 'ingredient') {
+      URL = `https://www.the${apiType}db.com/api/json/v1/1/filter.php?i=${nameFilter}`;
+    }
+    if (radioFilter === 'name') {
+      URL = `https://www.the${apiType}db.com/api/json/v1/1/search.php?s=${nameFilter}`;
+    }
+    if (radioFilter === 'firstLetter') {
+      if (nameFilter.length > 1 || nameFilter === 0) {
+        global.alert('Your search must have only 1 (one) character');
+      }
+      URL = `https://www.the${apiType}db.com/api/json/v1/1/search.php?f=${nameFilter}`;
+    }
+
+    const response = await fetch(URL);
+    const apiData = await response.json();
+
+    if (apiType === 'meal') {
+      setData(apiData.meals);
+    }
+    if (apiType === 'drinks') {
+      setData(apiData.drinks);
+    }
+  };
+
   const contextValue = useMemo(() => ({
-    name: 'dasd',
+    fetchSearchAPI,
+    data,
   }));
 
   return (
