@@ -5,18 +5,17 @@ import MyContext from '../context/MyContext';
 
 export default function VerifyRecipeQuantity({ type }) {
   const { data } = useContext(MyContext);
-  if (data?.length >= 1) return;
-
   if (data?.length === 0) {
     global.alert('Sorry, we haven\'t found any recipes for these filters.');
   }
 
-  if (type === 'meals') {
-    return <Redirect to={ `${type}/${data[0].idMeal}` } />;
-  }
-
-  if (type === 'drinks') {
-    return <Redirect to={ `${type}/${data[0].idDrink}` } />;
+  if (data?.length === 1) {
+    if (type === 'meals') {
+      return <Redirect to={ `${type}/${data[0].idMeal}` } />;
+    }
+    if (type === 'drinks') {
+      return <Redirect to={ `${type}/${data[0].idDrink}` } />;
+    }
   }
 }
 
