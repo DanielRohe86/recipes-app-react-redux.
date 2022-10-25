@@ -1,11 +1,13 @@
 import Header from '../components/Header';
-import RedirectToIdZero from '../components/RedirectToIdZero';
+import RenderData from '../components/RenderData';
+import VerifyRecipeQuantity from '../components/VerifyRecipeQuantity';
 
 function Meals() {
   return (
     <div>
-      <RedirectToIdZero type="meals" />
+      <VerifyRecipeQuantity type="meals" />
       <Header title="Meals" apiType="meal" />
+      <RenderData type="Meal" />
     </div>
   );
 }

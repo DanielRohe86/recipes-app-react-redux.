@@ -1,11 +1,13 @@
 import Header from '../components/Header';
-import RedirectToIdZero from '../components/RedirectToIdZero';
+import RenderData from '../components/RenderData';
+import VerifyRecipeQuantity from '../components/VerifyRecipeQuantity';
 
 function Drinks() {
   return (
     <div>
-      <RedirectToIdZero type="drinks" />
+      <VerifyRecipeQuantity type="drinks" />
       <Header title="Drinks" apiType="cocktail" />
+      <RenderData type="Drink" />
     </div>
   );
 }
