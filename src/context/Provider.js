@@ -5,7 +5,7 @@ import MyContext from './MyContext';
 function Provider({ children }) {
   const [data, setData] = useState([]);
 
-  const fetchSearchAPI = async (nameFilter, radioFilter, apiType) => {
+  const fetchSearchAPI = async (nameFilter, radioFilter, apiType = 'meal') => {
     let URL = '';
     if (radioFilter === 'ingredient') {
       URL = `https://www.the${apiType}db.com/api/json/v1/1/filter.php?i=${nameFilter}`;
@@ -19,15 +19,17 @@ function Provider({ children }) {
       }
       URL = `https://www.the${apiType}db.com/api/json/v1/1/search.php?f=${nameFilter}`;
     }
-
-    const response = await fetch(URL);
-    const apiData = await response.json();
-
-    if (apiType === 'meal') {
-      setData(apiData.meals);
-    }
-    if (apiType === 'drinks') {
-      setData(apiData.drinks);
+    try {
+      const response = await fetch(URL);
+      const apiData = await response.json();
+      if (apiType === 'meal') {
+        setData(apiData.meals);
+      }
+      if (apiType === 'drinks') {
+        setData(apiData.drinks);
+      }
+    } catch (error) {
+      global.alert(error.message);
     }
   };
 
