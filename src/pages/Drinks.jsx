@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import RenderData from '../components/RenderData';
+import Recipes from '../components/Recipes';
 import VerifyRecipeQuantity from '../components/VerifyRecipeQuantity';
 import Footer from '../components/Footer';
 
@@ -8,7 +8,7 @@ function Drinks() {
     <div>
       <VerifyRecipeQuantity type="drinks" />
       <Header title="Drinks" apiType="cocktail" />
-      <RenderData type="Drink" />
+      <Recipes type="Drink" />
       <Footer />
     </div>
   );

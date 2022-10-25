@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import profileIcon from '../images/profileIcon.svg';
 import searchIcon from '../images/searchIcon.svg';
 import SearchBar from './SearchBar';
+import MyContext from '../context/MyContext';
 
 function Header({
   title,
@@ -11,6 +12,10 @@ function Header({
   hasProfileIcon = true,
   apiType = 'meal',
 }) {
+  const { fetchSearchAPI } = useContext(MyContext);
+  useEffect(() => {
+    fetchSearchAPI('', 'name', apiType);
+  }, []);
   const [searchInput, setSearchInput] = useState(false);
   return (
     <header>

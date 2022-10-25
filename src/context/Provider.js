@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import MyContext from './MyContext';
 
 function Provider({ children }) {
-  const [data, setData] = useState(['', '']);
+  const [data, setData] = useState([]);
 
   const fetchSearchAPI = async (nameFilter, radioFilter, apiType = 'meal') => {
     let URL = '';
@@ -23,9 +23,15 @@ function Provider({ children }) {
       const response = await fetch(URL);
       const apiData = await response.json();
       if (apiType === 'meal') {
+        if (apiData.meals === null) {
+          throw new Error('Sorry, we haven\'t found any recipes for these filters.');
+        }
         setData(apiData.meals);
       }
       if (apiType === 'cocktail') {
+        if (apiData.drinks === null) {
+          throw new Error('Sorry, we haven\'t found any recipes for these filters.');
+        }
         setData(apiData.drinks);
       }
     } catch (error) {

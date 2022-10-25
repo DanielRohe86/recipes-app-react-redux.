@@ -1,14 +1,11 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import MyContext from '../context/MyContext';
 
 export default function SearchBar({ apiType }) {
-  const { fetchSearchAPI, setData } = useContext(MyContext);
+  const { fetchSearchAPI } = useContext(MyContext);
   const [nameFilter, setNameFilter] = useState('');
   const [radioFilter, setRadioFilter] = useState('');
-  useEffect(() => {
-    setData([]);
-  }, [setData]);
 
   const handleRadioChange = ({ target: { value } }) => {
     setRadioFilter(value);

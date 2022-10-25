@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import MyContext from '../context/MyContext';
 
 const MAX_RECIPES = 11;
-export default function RenderData({ type }) {
+export default function Recipes({ type }) {
   const { data } = useContext(MyContext);
   return (
     <div>
@@ -27,6 +27,6 @@ export default function RenderData({ type }) {
   );
 }
 
-RenderData.propTypes = {
+Recipes.propTypes = {
   type: PropTypes.string,
 }.isRequired;
