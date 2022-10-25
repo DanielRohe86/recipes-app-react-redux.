@@ -25,7 +25,7 @@ function Provider({ children }) {
       if (apiType === 'meal') {
         setData(apiData.meals);
       }
-      if (apiType === 'drinks') {
+      if (apiType === 'cocktail') {
         setData(apiData.drinks);
       }
     } catch (error) {
@@ -36,7 +36,7 @@ function Provider({ children }) {
   const contextValue = useMemo(() => ({
     fetchSearchAPI,
     data,
-  }));
+  }), [data]);
 
   return (
     <MyContext.Provider value={ contextValue }>
