@@ -35,6 +35,7 @@ function Provider({ children }) {
 
   const contextValue = useMemo(() => ({
     fetchSearchAPI,
+    setData,
     data,
   }), [data]);
 
