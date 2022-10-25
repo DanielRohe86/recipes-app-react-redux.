@@ -12,9 +12,10 @@ function Header({
   hasProfileIcon = true,
   apiType = 'meal',
 }) {
-  const { fetchSearchAPI } = useContext(MyContext);
+  const { fetchSearchAPI, fetchCategories } = useContext(MyContext);
   useEffect(() => {
     fetchSearchAPI('', 'name', apiType);
+    fetchCategories(apiType);
   }, []);
   const [searchInput, setSearchInput] = useState(false);
   return (

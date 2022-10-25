@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import MyContext from '../context/MyContext';
+import Filter from './Filter';
 
 const MAX_RECIPES = 11;
 export default function Recipes({ type }) {
   const { data } = useContext(MyContext);
   return (
     <div>
+      <Filter />
       {
         data?.map((recipe, index) => {
           if (index > MAX_RECIPES) return;

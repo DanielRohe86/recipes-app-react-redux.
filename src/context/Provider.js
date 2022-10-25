@@ -4,6 +4,7 @@ import MyContext from './MyContext';
 
 function Provider({ children }) {
   const [data, setData] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   const fetchSearchAPI = async (nameFilter, radioFilter, apiType = 'meal') => {
     let URL = '';
@@ -39,11 +40,29 @@ function Provider({ children }) {
     }
   };
 
+  const fetchCategories = async (apiType = 'meal') => {
+    const URL = `https://www.the${apiType}db.com/api/json/v1/1/list.php?c=list`;
+    try {
+      const response = await fetch(URL);
+      const apiCategoriesData = await response.json();
+      if (apiType === 'meal') {
+        setCategories(apiCategoriesData.meals);
+      }
+      if (apiType === 'cocktail') {
+        setCategories(apiCategoriesData.drinks);
+      }
+    } catch (error) {
+      global.alert(error.message);
+    }
+  };
+
   const contextValue = useMemo(() => ({
     fetchSearchAPI,
+    fetchCategories,
     setData,
     data,
-  }), [data]);
+    categories,
+  }), [data, categories]);
 
   return (
     <MyContext.Provider value={ contextValue }>
