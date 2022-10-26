@@ -4,19 +4,22 @@ import MyContext from './MyContext';
 
 function Provider({ children }) {
   const [data, setData] = useState([]);
+  const [backupData, setBackupData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [apiType, setApiType] = useState('meal');
+  const [nameFilter, setNameFilter] = useState('');
+  const [filterType, setFilterType] = useState('name');
 
-  const fetchSearchAPI = async (nameFilter = '', radioFilter = 'name') => {
+  const fetchSearchAPI = async () => {
     let URL = '';
     const apiName = (apiType === 'meal') ? 'meal' : 'cocktail';
-    if (radioFilter === 'ingredient') {
+    if (filterType === 'ingredient') {
       URL = `https://www.the${apiName}db.com/api/json/v1/1/filter.php?i=${nameFilter}`;
     }
-    if (radioFilter === 'name') {
+    if (filterType === 'name') {
       URL = `https://www.the${apiName}db.com/api/json/v1/1/search.php?s=${nameFilter}`;
     }
-    if (radioFilter === 'firstLetter') {
+    if (filterType === 'firstLetter') {
       if (nameFilter.length > 1 || nameFilter === 0) {
         global.alert('Your search must have only 1 (one) character');
       }
@@ -27,18 +30,20 @@ function Provider({ children }) {
       const apiData = await response.json();
       if (apiType === 'meal') {
         if (apiData.meals === null) {
-          throw new Error('Sorry, we haven\'t found any recipes for these filters.');
+          throw new Error();
         }
+        setBackupData(apiData.meals);
         setData(apiData.meals);
       }
       if (apiType === 'drink') {
         if (apiData.drinks === null) {
-          throw new Error('Sorry, we haven\'t found any recipes for these filters.');
+          throw new Error();
         }
+        setBackupData(apiData.drinks);
         setData(apiData.drinks);
       }
     } catch (error) {
-      global.alert(error.message);
+      global.alert('Sorry, we haven\'t found any recipes for these filters.');
     }
   };
 
@@ -55,8 +60,40 @@ function Provider({ children }) {
         setCategories(apiCategoriesData.drinks);
       }
     } catch (error) {
-      global.alert(error.message);
+      global.alert('Error to fetch categories');
     }
+  };
+
+  const searchByCategory = async (name) => {
+    try {
+      const apiName = (apiType === 'meal') ? 'meal' : 'cocktail';
+      console.log(apiName);
+      const URL = `https://www.the${apiName}db.com/api/json/v1/1/filter.php?c=${name}`;
+      const response = await fetch(URL);
+      const apiData = await response.json();
+      if (apiType === 'meal') {
+        if (apiData.meals === null) {
+          throw new Error();
+        }
+        setBackupData(apiData.meals);
+        setData(apiData.meals);
+      }
+      if (apiType === 'drink') {
+        if (apiData.drinks === null) {
+          throw new Error();
+        }
+        setBackupData(apiData.drinks);
+        setData(apiData.drinks);
+      }
+    } catch (error) {
+      global.alert('Sorry, we haven\'t found any recipes for these filters.');
+    }
+  };
+
+  const all = () => {
+    setNameFilter('');
+    setFilterType('name');
+    fetchSearchAPI();
   };
 
   useEffect(() => {
@@ -72,7 +109,13 @@ function Provider({ children }) {
     categories,
     setApiType,
     apiType,
-  }), [data, categories]);
+    setNameFilter,
+    nameFilter,
+    backupData,
+    setFilterType,
+    all,
+    searchByCategory,
+  }), [data, categories, apiType, nameFilter, backupData, searchByCategory]);
 
   return (
     <MyContext.Provider value={ contextValue }>

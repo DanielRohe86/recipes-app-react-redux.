@@ -1,13 +1,16 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import MyContext from '../context/MyContext';
 
 export default function SearchBar() {
-  const { fetchSearchAPI } = useContext(MyContext);
-  const [nameFilter, setNameFilter] = useState('');
-  const [radioFilter, setRadioFilter] = useState('name');
+  const {
+    fetchSearchAPI,
+    setNameFilter,
+    setFilterType,
+    nameFilter,
+  } = useContext(MyContext);
 
   const handleRadioChange = ({ target: { value } }) => {
-    setRadioFilter(value);
+    setFilterType(value);
   };
 
   return (
@@ -56,7 +59,7 @@ export default function SearchBar() {
       <button
         type="button"
         data-testid="exec-search-btn"
-        onClick={ () => fetchSearchAPI(nameFilter, radioFilter) }
+        onClick={ () => fetchSearchAPI() }
       >
         Search
       </button>
