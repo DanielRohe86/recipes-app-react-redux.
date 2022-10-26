@@ -9,5 +9,7 @@ describe('Testando Filter', () => {
     const filterOptionBeef = await screen.findByTestId('Beef-category-filter', {}, { timeout: 5000 });
     debug();
     expect(filterOptionBeef).toBeInTheDocument();
+    expect(await screen.findByTestId('0-card-name', {}, { timeout: 5000 })).toBeInTheDocument();
+    expect(await screen.findByTestId('0-card-img', {}, { timeout: 5000 })).toBeInTheDocument();
   });
 });

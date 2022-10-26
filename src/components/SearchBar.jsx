@@ -1,11 +1,10 @@
 import React, { useState, useContext } from 'react';
-import PropTypes from 'prop-types';
 import MyContext from '../context/MyContext';
 
-export default function SearchBar({ apiType }) {
+export default function SearchBar() {
   const { fetchSearchAPI } = useContext(MyContext);
   const [nameFilter, setNameFilter] = useState('');
-  const [radioFilter, setRadioFilter] = useState('');
+  const [radioFilter, setRadioFilter] = useState('name');
 
   const handleRadioChange = ({ target: { value } }) => {
     setRadioFilter(value);
@@ -57,14 +56,10 @@ export default function SearchBar({ apiType }) {
       <button
         type="button"
         data-testid="exec-search-btn"
-        onClick={ () => fetchSearchAPI(nameFilter, radioFilter, apiType) }
+        onClick={ () => fetchSearchAPI(nameFilter, radioFilter) }
       >
         Search
       </button>
     </div>
   );
 }
-
-SearchBar.propTypes = {
-  apiType: PropTypes.string,
-}.isRequired;
