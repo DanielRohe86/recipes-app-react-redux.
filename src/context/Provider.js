@@ -4,6 +4,7 @@ import MyContext from './MyContext';
 
 function Provider({ children }) {
   const [data, setData] = useState([]);
+  const [singleData, setSingleData] = useState([]);
   const [backupData, setBackupData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [apiType, setApiType] = useState('meal');
@@ -67,7 +68,6 @@ function Provider({ children }) {
   const searchByCategory = async (name) => {
     try {
       const apiName = (apiType === 'meal') ? 'meal' : 'cocktail';
-      console.log(apiName);
       const URL = `https://www.the${apiName}db.com/api/json/v1/1/filter.php?c=${name}`;
       const response = await fetch(URL);
       const apiData = await response.json();
@@ -87,6 +87,23 @@ function Provider({ children }) {
       }
     } catch (error) {
       global.alert('Sorry, we haven\'t found any recipes for these filters.');
+    }
+  };
+
+  const fetchAPIByID = async (id) => {
+    try {
+      const apiName = (apiType === 'meal') ? 'meal' : 'cocktail';
+      const URL = `https://www.the${apiName}db.com/api/json/v1/1/lookup.php?i=${id}`;
+      const response = await fetch(URL);
+      const apiData = await response.json();
+      if (apiType === 'meal') {
+        setSingleData(apiData.meals);
+      }
+      if (apiType === 'drink') {
+        setSingleData(apiData.drinks);
+      }
+    } catch (error) {
+      global.alert('erro');
     }
   };
 
@@ -115,7 +132,9 @@ function Provider({ children }) {
     setFilterType,
     all,
     searchByCategory,
-  }), [data, categories, apiType, nameFilter, backupData, searchByCategory]);
+    fetchAPIByID,
+    singleData,
+  }), [data, categories, apiType, nameFilter, backupData, searchByCategory, singleData]);
 
   return (
     <MyContext.Provider value={ contextValue }>
