@@ -1,24 +1,15 @@
-import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import MyContext from '../context/MyContext';
 
-export default function VerifyRecipeQuantity({ type }) {
-  const { data } = useContext(MyContext);
-  if (data?.length === 0) {
-    global.alert('Sorry, we haven\'t found any recipes for these filters.');
-  }
-
+export default function VerifyRecipeQuantity() {
+  const { data, apiType } = useContext(MyContext);
   if (data?.length === 1) {
-    if (type === 'meals') {
-      return <Redirect to={ `${type}/${data[0].idMeal}` } />;
+    if (apiType === 'meal') {
+      return <Redirect to={ `${apiType}s/${data[0].idMeal}` } />;
     }
-    if (type === 'drinks') {
-      return <Redirect to={ `${type}/${data[0].idDrink}` } />;
+    if (apiType === 'drink') {
+      return <Redirect to={ `${apiType}s/${data[0].idDrink}` } />;
     }
   }
 }
-
-VerifyRecipeQuantity.propTypes = {
-  type: PropTypes.string,
-}.isRequired;

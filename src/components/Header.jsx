@@ -9,7 +9,6 @@ function Header({
   title,
   hasSearchIcon = true,
   hasProfileIcon = true,
-  apiType = 'meal',
 }) {
   const [searchInput, setSearchInput] = useState(false);
   return (
@@ -43,7 +42,7 @@ function Header({
 
       {
         (searchInput) && (
-          <SearchBar apiType={ apiType } />
+          <SearchBar />
         )
       }
 
@@ -60,7 +59,6 @@ Header.propTypes = {
   hasProfileIcon: PropTypes.bool,
   hasSearchIcon: PropTypes.bool,
   title: PropTypes.string,
-  apiType: PropTypes.string,
 }.isRequired;
 
 export default Header;

@@ -1,14 +1,22 @@
+import { useEffect, useContext } from 'react';
 import Header from '../components/Header';
-import RenderData from '../components/RenderData';
+import Recipes from '../components/Recipes';
 import VerifyRecipeQuantity from '../components/VerifyRecipeQuantity';
 import Footer from '../components/Footer';
+import MyContext from '../context/MyContext';
 
 function Meals() {
+  const { setApiType } = useContext(MyContext);
+
+  useEffect(() => {
+    setApiType('meal');
+  }, [setApiType]);
+
   return (
     <div>
-      <VerifyRecipeQuantity type="meals" />
-      <Header title="Meals" apiType="meal" />
-      <RenderData type="Meal" />
+      <VerifyRecipeQuantity />
+      <Header title="Meals" />
+      <Recipes />
       <Footer />
     </div>
   );
