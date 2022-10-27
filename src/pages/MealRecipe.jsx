@@ -4,33 +4,32 @@ import Footer from '../components/Footer';
 import MyContext from '../context/MyContext';
 
 export default function MealRecipe() {
-  const { fetchAPIByID, apiType, singleData } = useContext(MyContext);
+  const { fetchAPIByID, singleData } = useContext(MyContext);
 
   const history = useHistory();
 
   useEffect(() => {
     const { location: { pathname } } = history;
     const id = pathname.split('/')[2];
-    fetchAPIByID(id);
+    fetchAPIByID(id, 'meal');
   }, []);
-  const apiTypeUpper = apiType[0].toUpperCase() + apiType.substring(1);
   return (
     <div>
       {
-        singleData?.map((recipe, index) => (
+        singleData[0] && (
           <div
-            data-testid={ `${index}-card-button` }
-            key={ recipe[`id${apiTypeUpper}`] }
+            data-testid="0-card-button"
+            key={ singleData[0].idMeal }
           >
-            <h3 data-testid={ `${index}-card-name` }>{recipe[`str${apiTypeUpper}`]}</h3>
-            <p data-testid={ `${index}-recipe-card` }>{ recipe.strInstructions }</p>
+            <h3 data-testid="0-card-name">{singleData[0].strMeal}</h3>
+            <p data-testid="0-singleData[0]-card">{ singleData[0].strInstructions }</p>
             <img
-              data-testid={ `${index}-card-img` }
-              src={ recipe[`str${apiTypeUpper}Thumb`] }
-              alt={ recipe[`id${apiTypeUpper}`] }
+              data-testid="0-card-img"
+              src={ singleData[0].strMealThumb }
+              alt={ singleData[0].idMeal }
             />
           </div>
-        ))
+        )
       }
       <Footer />
     </div>
