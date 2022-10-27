@@ -9,29 +9,49 @@ export default function DrinkRecipe() {
   const history = useHistory();
 
   useEffect(() => {
+    console.log(history);
     const { location: { pathname } } = history;
     const id = pathname.split('/')[2];
     fetchAPIByID(id, 'drink');
   }, []);
 
+  let arrMeasure = [];
+  let arrIngredient = [];
+  if (singleData?.[0]) {
+    const singleDataKeys = Object.entries(singleData[0]);
+    const entriesIngredient = singleDataKeys
+      .filter((el) => el[0].includes('strIngredient') && el[1]);
+    arrIngredient = entriesIngredient.map((el) => el[1]);
+    const entriesMeasure = singleDataKeys
+      .filter((el) => el?.[0].includes('strMeasure') && el[1]);
+    arrMeasure = entriesMeasure.map((el) => el[1]);
+  }
   return (
     <div>
-      {
-        singleData[0] && (
-          <div
-            data-testid="0-card-button"
-            key={ singleData[0].idDrink }
-          >
-            <h3 data-testid="0-card-name">{singleData[0].strDrink}</h3>
-            <p data-testid="0-singleData[0]-card">{ singleData[0].strInstructions }</p>
-            <img
-              data-testid="0-card-img"
-              src={ singleData[0].strDrinkThumb }
-              alt={ singleData[0].idDrink }
-            />
-          </div>
-        )
-      }
+      {singleData?.[0] && (
+        <div>
+          <h3 data-testid="recipe-title">{singleData?.[0].strDrink}</h3>
+          <h3 data-testid="recipe-category">{singleData?.[0].strAlcoholic}</h3>
+          <img
+            data-testid="recipe-photo"
+            src={ singleData?.[0].strDrinkThumb }
+            alt={ singleData?.[0].idDrink }
+          />
+          { arrIngredient.map((el, index) => (
+            <p key={ el } data-testid={ `${index}-ingredient-name-and-measure` }>
+              {`${el} ${arrMeasure[index] ? arrMeasure[index] : ''}`}
+            </p>
+          ))}
+          <p data-testid="instructions">{ singleData?.[0].strInstructions }</p>
+        </div>
+      )}
+      <button
+        type="button"
+        className="start-btn"
+        data-testid="start-recipe-btn"
+      >
+        Start Recipe
+      </button>
       <Footer />
     </div>
   );

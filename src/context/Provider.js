@@ -13,8 +13,9 @@ function Provider({ children }) {
   const [filterType, setFilterType] = useState('name');
 
   const fetchSearchAPI = async () => {
+    const internApiType = apiType;
     let URL = '';
-    const apiName = (apiType === 'meal') ? 'meal' : 'cocktail';
+    const apiName = (internApiType === 'meal') ? 'meal' : 'cocktail';
     if (filterType === 'ingredient') {
       URL = `https://www.the${apiName}db.com/api/json/v1/1/filter.php?i=${nameFilter}`;
     }
@@ -30,14 +31,14 @@ function Provider({ children }) {
     try {
       const response = await fetch(URL);
       const apiData = await response.json();
-      if (apiType === 'meal') {
+      if (internApiType === 'meal') {
         if (apiData.meals === null) {
           throw new Error();
         }
         setBackupData(apiData.meals);
         setData(apiData.meals);
       }
-      if (apiType === 'drink') {
+      if (internApiType === 'drink') {
         if (apiData.drinks === null) {
           throw new Error();
         }
@@ -50,15 +51,16 @@ function Provider({ children }) {
   };
 
   const fetchCategories = async () => {
-    const apiName = (apiType === 'meal') ? 'meal' : 'cocktail';
+    const internApiType = apiType;
+    const apiName = (internApiType === 'meal') ? 'meal' : 'cocktail';
     const URL = `https://www.the${apiName}db.com/api/json/v1/1/list.php?c=list`;
     try {
       const response = await fetch(URL);
       const apiCategoriesData = await response.json();
-      if (apiType === 'meal') {
+      if (internApiType === 'meal') {
         setCategories(apiCategoriesData.meals);
       }
-      if (apiType === 'drink') {
+      if (internApiType === 'drink') {
         setCategories(apiCategoriesData.drinks);
       }
     } catch (error) {
@@ -67,18 +69,19 @@ function Provider({ children }) {
   };
 
   const searchByCategory = async (name) => {
+    const internApiType = apiType;
     try {
-      const apiName = (apiType === 'meal') ? 'meal' : 'cocktail';
+      const apiName = (internApiType === 'meal') ? 'meal' : 'cocktail';
       const URL = `https://www.the${apiName}db.com/api/json/v1/1/filter.php?c=${name}`;
       const response = await fetch(URL);
       const apiData = await response.json();
-      if (apiType === 'meal') {
+      if (internApiType === 'meal') {
         if (apiData.meals === null) {
           throw new Error();
         }
         setCategoriesData(apiData.meals);
       }
-      if (apiType === 'drink') {
+      if (internApiType === 'drink') {
         if (apiData.drinks === null) {
           throw new Error();
         }
@@ -95,10 +98,12 @@ function Provider({ children }) {
       const URL = `https://www.the${apiName}db.com/api/json/v1/1/lookup.php?i=${id}`;
       const response = await fetch(URL);
       const apiData = await response.json();
-      if (apiType === 'meal') {
+      if (apiNewType === 'meal') {
+        console.log(apiData.meals);
         setSingleData(apiData.meals);
       }
-      if (apiType === 'drink') {
+      if (apiNewType === 'drink') {
+        console.log(apiData.drinks);
         setSingleData(apiData.drinks);
       }
     } catch (error) {
@@ -135,7 +140,8 @@ function Provider({ children }) {
     fetchAPIByID,
     singleData,
     categoriesData,
-  }), [data, categories, apiType, nameFilter, backupData, singleData, categoriesData]);
+  }), [data, categories,
+    apiType, nameFilter, backupData, singleData, categoriesData]);
 
   return (
     <MyContext.Provider value={ contextValue }>

@@ -70,3 +70,9 @@
 img {
   max-width: 50%;
 }
+
+.start-btn {
+  bottom: 0;
+  right: 0;
+  position: fixed;
+}

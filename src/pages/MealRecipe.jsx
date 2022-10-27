@@ -6,31 +6,67 @@ import MyContext from '../context/MyContext';
 export default function MealRecipe() {
   const { fetchAPIByID, singleData } = useContext(MyContext);
 
+  useEffect(() => {
+    console.log('atualizou', singleData);
+  }, [singleData]);
+
   const history = useHistory();
 
   useEffect(() => {
+    console.log(history);
     const { location: { pathname } } = history;
+
     const id = pathname.split('/')[2];
     fetchAPIByID(id, 'meal');
   }, []);
+
+  let arrMeasure = [];
+  let arrIngredient = [];
+  let ytLink = '';
+  if (singleData?.[0]) {
+    const singleDataKeys = Object.entries(singleData[0]);
+    const entriesIngredient = singleDataKeys
+      .filter((el) => el[0].includes('strIngredient') && el[1]);
+    arrIngredient = entriesIngredient.map((el) => el[1]);
+    const entriesMeasure = singleDataKeys
+      .filter((el) => el?.[0].includes('strMeasure') && el[1]);
+    arrMeasure = entriesMeasure.map((el) => el[1]);
+    const arrYtLink = singleData[0]?.strYoutube.split('/');
+    ytLink = `${arrYtLink[0] + arrYtLink[2]}/embed/${arrYtLink[3]}`;
+  }
   return (
     <div>
-      {
-        singleData[0] && (
-          <div
-            data-testid="0-card-button"
-            key={ singleData[0].idMeal }
-          >
-            <h3 data-testid="0-card-name">{singleData[0].strMeal}</h3>
-            <p data-testid="0-singleData[0]-card">{ singleData[0].strInstructions }</p>
-            <img
-              data-testid="0-card-img"
-              src={ singleData[0].strMealThumb }
-              alt={ singleData[0].idMeal }
-            />
-          </div>
-        )
-      }
+      {singleData?.[0] && (
+        <div>
+          <h3 data-testid="recipe-title">{singleData?.[0].strMeal}</h3>
+          <h3 data-testid="recipe-category">{singleData?.[0].strCategory}</h3>
+          <img
+            data-testid="recipe-photo"
+            src={ singleData?.[0].strMealThumb }
+            alt={ singleData?.[0].idMeal }
+          />
+          { arrIngredient.map((el, index) => (
+            <p key={ el } data-testid={ `${index}-ingredient-name-and-measure` }>
+              {`${el} ${arrMeasure[index] ? arrMeasure[index] : ''}`}
+            </p>
+          ))}
+          <p data-testid="instructions">{ singleData?.[0].strInstructions }</p>
+          <iframe
+            data-testid="video"
+            title="receita"
+            width="420"
+            height="315"
+            src={ ytLink }
+          />
+        </div>
+      )}
+      <button
+        type="button"
+        className="start-btn"
+        data-testid="start-recipe-btn"
+      >
+        Start Recipe
+      </button>
       <Footer />
     </div>
   );
