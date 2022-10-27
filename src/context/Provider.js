@@ -6,6 +6,7 @@ function Provider({ children }) {
   const [data, setData] = useState([]);
   const [singleData, setSingleData] = useState([]);
   const [backupData, setBackupData] = useState([]);
+  const [recomendation, setRecomendation] = useState([]);
   const [categories, setCategories] = useState([]);
   const [categoriesData, setCategoriesData] = useState([]);
   const [apiType, setApiType] = useState('meal');
@@ -111,6 +112,25 @@ function Provider({ children }) {
     }
   };
 
+  const fetchRecomendation = async (id, apiNewType) => {
+    try {
+      const apiName = (apiNewType === 'meal') ? 'meal' : 'cocktail';
+      const URL = `https://www.the${apiName}db.com/api/json/v1/1/search.php?s=`;
+      const response = await fetch(URL);
+      const apiData = await response.json();
+      if (apiNewType === 'meal') {
+        console.log(apiData.meals);
+        setRecomendation(apiData.meals);
+      }
+      if (apiNewType === 'drink') {
+        console.log(apiData.drinks);
+        setRecomendation(apiData.drinks);
+      }
+    } catch (error) {
+      global.alert('erro');
+    }
+  };
+
   const all = () => {
     setNameFilter('');
     setFilterType('name');
@@ -140,7 +160,9 @@ function Provider({ children }) {
     fetchAPIByID,
     singleData,
     categoriesData,
-  }), [data, categories,
+    fetchRecomendation,
+    recomendation,
+  }), [data, categories, recomendation,
     apiType, nameFilter, backupData, singleData, categoriesData]);
 
   return (

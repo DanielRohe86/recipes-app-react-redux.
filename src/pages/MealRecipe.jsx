@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import MyContext from '../context/MyContext';
 
 export default function MealRecipe() {
-  const { fetchAPIByID, singleData } = useContext(MyContext);
+  const { fetchAPIByID, singleData, fetchRecomendation } = useContext(MyContext);
 
   useEffect(() => {
     console.log('atualizou', singleData);
@@ -18,6 +18,7 @@ export default function MealRecipe() {
 
     const id = pathname.split('/')[2];
     fetchAPIByID(id, 'meal');
+    fetchRecomendation(id, 'drink');
   }, []);
 
   let arrMeasure = [];

@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import MyContext from '../context/MyContext';
 
 export default function DrinkRecipe() {
-  const { fetchAPIByID, singleData } = useContext(MyContext);
+  const { fetchAPIByID, singleData, fetchRecomendation } = useContext(MyContext);
 
   const history = useHistory();
 
@@ -13,6 +13,7 @@ export default function DrinkRecipe() {
     const { location: { pathname } } = history;
     const id = pathname.split('/')[2];
     fetchAPIByID(id, 'drink');
+    fetchRecomendation(id, 'meal');
   }, []);
 
   let arrMeasure = [];
