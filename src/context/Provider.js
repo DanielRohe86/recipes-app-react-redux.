@@ -7,7 +7,6 @@ const MAX_RECOMENDATION = 11;
 function Provider({ children }) {
   const [data, setData] = useState([]);
   const [singleData, setSingleData] = useState([]);
-  const [backupData, setBackupData] = useState([]);
   const [recomendation, setRecomendation] = useState([]);
   const [categories, setCategories] = useState([]);
   const [categoriesData, setCategoriesData] = useState([]);
@@ -162,7 +161,6 @@ function Provider({ children }) {
     apiType,
     setNameFilter,
     nameFilter,
-    backupData,
     setFilterType,
     all,
     searchByCategory,
@@ -172,7 +170,7 @@ function Provider({ children }) {
     fetchRecomendation,
     recomendation,
   }), [data, categories, recomendation,
-    apiType, nameFilter, backupData, singleData, categoriesData]);
+    apiType, nameFilter, singleData, categoriesData]);
 
   return (
     <MyContext.Provider value={ contextValue }>
