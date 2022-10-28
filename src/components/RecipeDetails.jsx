@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useContext, useEffect, useState } from 'react';
 import MyContext from '../context/MyContext';
 
-export default function RecipeDetails({ apiType }) {
+export default function RecipeDetails({ apiType, id }) {
   const { singleData, recomendation } = useContext(MyContext);
   const [doneRe, setDoneRecipes] = useState([]);
   const [inProgress, setInProgress] = useState([]);
@@ -25,10 +25,13 @@ export default function RecipeDetails({ apiType }) {
     arrMeasure = entriesMeasure.map((el) => el[1]);
   }
   let ytLink = '';
-  if (singleData[0]?.strYoutube) {
+  if (singleData?.[0]?.strYoutube) {
     const arrYtLink = singleData[0]?.strYoutube.split('/');
     ytLink = `${arrYtLink[0] + arrYtLink[2]}/embed/${arrYtLink[3]}`;
   }
+  // console.log(inProgress?.meals?.comida01);
+  console.log(inProgress?.[nameApiType]?.[id]);
+  console.log(id);
   return (
     <div>
       {singleData?.[0] && (
@@ -87,7 +90,7 @@ export default function RecipeDetails({ apiType }) {
             data-testid="start-recipe-btn"
           >
             {
-              inProgress?.[nameApiType]?.[`id${apiType}`] ? (
+              inProgress?.[nameApiType]?.[id] ? (
                 'Continue Recipe'
               ) : (
                 'Start Recipe'
@@ -96,7 +99,6 @@ export default function RecipeDetails({ apiType }) {
           </button>
         )
       }
-
     </div>
   );
 }
