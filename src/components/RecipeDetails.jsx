@@ -7,8 +7,8 @@ export default function RecipeDetails({ apiType }) {
   const [doneRe, setDoneRecipes] = useState([]);
   const [inProgress, setInProgress] = useState([]);
   useEffect(() => {
-    setDoneRecipes(localStorage.getItem('doneRecipes'));
-    setInProgress(localStorage.getItem('inProgressRecipes'));
+    setDoneRecipes(JSON.parse(localStorage.getItem('doneRecipes')));
+    setInProgress(JSON.parse(localStorage.getItem('inProgressRecipes')));
   }, []);
 
   const other = apiType === 'Meal' ? 'Drink' : 'Meal';
