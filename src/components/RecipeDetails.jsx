@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 import React, { useContext, useEffect, useState } from 'react';
 import MyContext from '../context/MyContext';
 
 export default function RecipeDetails({ apiType, id }) {
+  const history = useHistory();
   const { singleData, recomendation } = useContext(MyContext);
   const [doneRe, setDoneRecipes] = useState([]);
   const [inProgress, setInProgress] = useState([]);
@@ -29,9 +31,7 @@ export default function RecipeDetails({ apiType, id }) {
     const arrYtLink = singleData[0]?.strYoutube.split('/');
     ytLink = `${arrYtLink[0] + arrYtLink[2]}/embed/${arrYtLink[3]}`;
   }
-  // console.log(inProgress?.meals?.comida01);
-  console.log(inProgress?.[nameApiType]?.[id]);
-  console.log(id);
+
   return (
     <div>
       {singleData?.[0] && (
@@ -88,6 +88,7 @@ export default function RecipeDetails({ apiType, id }) {
             type="button"
             className="start-btn"
             data-testid="start-recipe-btn"
+            onClick={ () => history.push(`/${nameApiType}/${id}/in-progress`) }
           >
             {
               inProgress?.[nameApiType]?.[id] ? (
@@ -105,4 +106,8 @@ export default function RecipeDetails({ apiType, id }) {
 
 RecipeDetails.propTypes = {
   apiType: PropTypes.string,
-}.isRequired;
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }),
+  id: PropTypes.string,
+}.isRequires;
