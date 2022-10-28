@@ -7,6 +7,7 @@ import shareImg from '../images/shareIcon.svg';
 import favoriteWhiteHeart from '../images/whiteHeartIcon.svg';
 
 const time = 3000;
+const menosUm = -1;
 export default function RecipeDetails({ apiType, id }) {
   const history = useHistory();
   const { singleData, recomendation } = useContext(MyContext);
@@ -34,14 +35,32 @@ export default function RecipeDetails({ apiType, id }) {
     arrMeasure = entriesMeasure.map((el) => el[1]);
   }
   let ytLink = '';
+
   if (singleData?.[0]?.strYoutube) {
     const arrYtLink = singleData[0]?.strYoutube.split('/');
     ytLink = `${arrYtLink[0] + arrYtLink[2]}/embed/${arrYtLink[3]}`;
   }
+
   const handleShareButton = () => {
     setShowCopyMessage(true);
     copy(`http://localhost:3000${history.location.pathname}`);
     setTimeout(() => setShowCopyMessage(false), time);
+  };
+  const handleFavoriteButton = () => {
+    const currentFav = JSON
+      .parse(localStorage
+        .getItem('favoriteRecipes')) ? JSON
+        .parse(localStorage.getItem('favoriteRecipes')) : [];
+    const saveFavRecipe = [...currentFav, {
+      id: singleData[0][`id${apiType}`],
+      type: nameApiType.slice(0, menosUm),
+      nationality: singleData[0].strArea ? singleData[0].strArea : '',
+      category: singleData[0].strCategory,
+      alcoholicOrNot: singleData[0].strAlcoholic ? singleData[0].strAlcoholic : '',
+      name: singleData[0][`str${apiType}`],
+      image: singleData[0][`str${apiType}Thumb`],
+    }];
+    localStorage.setItem('favoriteRecipes', JSON.stringify(saveFavRecipe));
   };
 
   return (
@@ -78,12 +97,15 @@ export default function RecipeDetails({ apiType, id }) {
       { showCopyMessage && (
         <p>Link copied!</p>
       )}
+
       <button type="button" data-testid="share-btn" onClick={ handleShareButton }>
         <img src={ shareImg } alt="compartilhar" />
       </button>
-      <button type="button" data-testid="favorite-btn">
+
+      <button type="button" data-testid="favorite-btn" onClick={ handleFavoriteButton }>
         <img src={ favoriteWhiteHeart } alt="favoritar" />
       </button>
+
       <div className="carousel">
         {
           recomendation?.map((item, index) => (
