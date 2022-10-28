@@ -1,13 +1,19 @@
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
+import copy from 'clipboard-copy';
 import React, { useContext, useEffect, useState } from 'react';
 import MyContext from '../context/MyContext';
+import shareImg from '../images/shareIcon.svg';
+import favoriteWhiteHeart from '../images/whiteHeartIcon.svg';
 
+const time = 3000;
 export default function RecipeDetails({ apiType, id }) {
   const history = useHistory();
   const { singleData, recomendation } = useContext(MyContext);
   const [doneRe, setDoneRecipes] = useState([]);
+  const [showCopyMessage, setShowCopyMessage] = useState(false);
   const [inProgress, setInProgress] = useState([]);
+
   useEffect(() => {
     setDoneRecipes(JSON.parse(localStorage.getItem('doneRecipes')));
     setInProgress(JSON.parse(localStorage.getItem('inProgressRecipes')));
@@ -17,6 +23,7 @@ export default function RecipeDetails({ apiType, id }) {
   const nameApiType = apiType === 'Meal' ? 'meals' : 'drinks';
   let arrMeasure = [];
   let arrIngredient = [];
+
   if (singleData?.[0]) {
     const singleDataKeys = Object.entries(singleData[0]);
     const entriesIngredient = singleDataKeys
@@ -31,6 +38,11 @@ export default function RecipeDetails({ apiType, id }) {
     const arrYtLink = singleData[0]?.strYoutube.split('/');
     ytLink = `${arrYtLink[0] + arrYtLink[2]}/embed/${arrYtLink[3]}`;
   }
+  const handleShareButton = () => {
+    setShowCopyMessage(true);
+    copy(`http://localhost:3000${history.location.pathname}`);
+    setTimeout(() => setShowCopyMessage(false), time);
+  };
 
   return (
     <div>
@@ -63,6 +75,15 @@ export default function RecipeDetails({ apiType, id }) {
           }
         </div>
       )}
+      { showCopyMessage && (
+        <p>Link copied!</p>
+      )}
+      <button type="button" data-testid="share-btn" onClick={ handleShareButton }>
+        <img src={ shareImg } alt="compartilhar" />
+      </button>
+      <button type="button" data-testid="favorite-btn">
+        <img src={ favoriteWhiteHeart } alt="favoritar" />
+      </button>
       <div className="carousel">
         {
           recomendation?.map((item, index) => (
