@@ -5,11 +5,14 @@ import MyContext from '../context/MyContext';
 export default function RecipeDetails({ apiType }) {
   const { singleData, recomendation } = useContext(MyContext);
   const [doneRe, setDoneRecipes] = useState([]);
+  const [inProgress, setInProgress] = useState([]);
   useEffect(() => {
     setDoneRecipes(localStorage.getItem('doneRecipes'));
+    setInProgress(localStorage.getItem('inProgressRecipes'));
   }, []);
 
   const other = apiType === 'Meal' ? 'Drink' : 'Meal';
+  const nameApiType = apiType === 'Meal' ? 'meals' : 'drinks';
   let arrMeasure = [];
   let arrIngredient = [];
   if (singleData?.[0]) {
@@ -77,13 +80,19 @@ export default function RecipeDetails({ apiType }) {
         }
       </div>
       {
-        !doneRe?.some((el) => el[`str${apiType}`] === singleData[0][`str${apiType}`]) && (
+        !doneRe?.some((el) => el?.id === singleData?.[0]?.[`id${apiType}`]) && (
           <button
             type="button"
             className="start-btn"
             data-testid="start-recipe-btn"
           >
-            Start Recipe
+            {
+              inProgress?.[nameApiType]?.[`id${apiType}`] ? (
+                'Continue Recipe'
+              ) : (
+                'Start Recipe'
+              )
+            }
           </button>
         )
       }
