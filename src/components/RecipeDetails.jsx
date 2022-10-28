@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import MyContext from '../context/MyContext';
 
 export default function RecipeDetails({ apiType }) {
   const { singleData, recomendation } = useContext(MyContext);
+  const [doneRe, setDoneRecipes] = useState([]);
+  useEffect(() => {
+    setDoneRecipes(localStorage.getItem('doneRecipes'));
+  }, []);
+
   const other = apiType === 'Meal' ? 'Drink' : 'Meal';
   let arrMeasure = [];
   let arrIngredient = [];
@@ -71,13 +76,17 @@ export default function RecipeDetails({ apiType }) {
           ))
         }
       </div>
-      <button
-        type="button"
-        className="start-btn"
-        data-testid="start-recipe-btn"
-      >
-        Start Recipe
-      </button>
+      {
+        !doneRe?.some((el) => el[`str${apiType}`] === singleData[0][`str${apiType}`]) && (
+          <button
+            type="button"
+            className="start-btn"
+            data-testid="start-recipe-btn"
+          >
+            Start Recipe
+          </button>
+        )
+      }
 
     </div>
   );
