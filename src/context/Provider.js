@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { useEffect, useMemo, useState } from 'react';
 import MyContext from './MyContext';
 
+const MAX_RECOMENDATION = 11;
+
 function Provider({ children }) {
   const [data, setData] = useState([]);
   const [singleData, setSingleData] = useState([]);
@@ -36,15 +38,17 @@ function Provider({ children }) {
         if (apiData.meals === null) {
           throw new Error();
         }
-        setBackupData(apiData.meals);
-        setData(apiData.meals);
+        const filtredArr = apiData.meals
+          .filter((el, index) => index <= MAX_RECOMENDATION);
+        setData(filtredArr);
       }
       if (internApiType === 'drink') {
         if (apiData.drinks === null) {
           throw new Error();
         }
-        setBackupData(apiData.drinks);
-        setData(apiData.drinks);
+        const filtredArr = apiData.drinks
+          .filter((el, index) => index <= MAX_RECOMENDATION);
+        setData(filtredArr);
       }
     } catch (error) {
       global.alert('Sorry, we haven\'t found any recipes for these filters.');
@@ -80,13 +84,17 @@ function Provider({ children }) {
         if (apiData.meals === null) {
           throw new Error();
         }
-        setCategoriesData(apiData.meals);
+        const filtredArr = apiData.meals
+          .filter((el, index) => index <= MAX_RECOMENDATION);
+        setCategoriesData(filtredArr);
       }
       if (internApiType === 'drink') {
         if (apiData.drinks === null) {
           throw new Error();
         }
-        setCategoriesData(apiData.drinks);
+        const filtredArr = apiData.drinks
+          .filter((el, index) => index <= MAX_RECOMENDATION);
+        setCategoriesData(filtredArr);
       }
     } catch (error) {
       global.alert('Sorry, we haven\'t found any recipes for these filters.');
@@ -100,11 +108,9 @@ function Provider({ children }) {
       const response = await fetch(URL);
       const apiData = await response.json();
       if (apiNewType === 'meal') {
-        console.log(apiData.meals);
         setSingleData(apiData.meals);
       }
       if (apiNewType === 'drink') {
-        console.log(apiData.drinks);
         setSingleData(apiData.drinks);
       }
     } catch (error) {
