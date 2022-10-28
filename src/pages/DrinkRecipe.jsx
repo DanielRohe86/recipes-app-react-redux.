@@ -4,7 +4,8 @@ import Footer from '../components/Footer';
 import MyContext from '../context/MyContext';
 
 export default function DrinkRecipe() {
-  const { fetchAPIByID, singleData, fetchRecomendation } = useContext(MyContext);
+  const { fetchAPIByID,
+    singleData, fetchRecomendation, recomendation } = useContext(MyContext);
 
   const history = useHistory();
 
@@ -46,6 +47,23 @@ export default function DrinkRecipe() {
           <p data-testid="instructions">{ singleData?.[0].strInstructions }</p>
         </div>
       )}
+      <div className="carousel">
+        {
+          recomendation.map((item, index) => (
+            <div
+              data-testid={ `${index}-recommendation-card` }
+              className="item"
+              key={ item.strMeal }
+            >
+              <img
+                src={ item.strMealThumb }
+                alt={ item.strMeal }
+              />
+              <h3 data-testid={ `${index}-recommendation-title` }>{ item.strMeal }</h3>
+            </div>
+          ))
+        }
+      </div>
       <button
         type="button"
         className="start-btn"

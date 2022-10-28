@@ -73,6 +73,23 @@ img {
 
 .start-btn {
   bottom: 0;
-  right: 0;
   position: fixed;
+  right: 0;
+}
+
+
+.carousel {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.item {
+  display: inline-block;
+  width: 51%;
+}
+
+.item img {
+  max-width: 100%;
+  width: 100%;
 }

@@ -114,17 +114,20 @@ function Provider({ children }) {
 
   const fetchRecomendation = async (id, apiNewType) => {
     try {
+      const MAX_RECOMENDATION_ELEMENTS = 5;
       const apiName = (apiNewType === 'meal') ? 'meal' : 'cocktail';
       const URL = `https://www.the${apiName}db.com/api/json/v1/1/search.php?s=`;
       const response = await fetch(URL);
       const apiData = await response.json();
       if (apiNewType === 'meal') {
-        console.log(apiData.meals);
-        setRecomendation(apiData.meals);
+        const filtredArr = apiData.meals
+          .filter((el, index) => index <= MAX_RECOMENDATION_ELEMENTS);
+        setRecomendation(filtredArr);
       }
       if (apiNewType === 'drink') {
-        console.log(apiData.drinks);
-        setRecomendation(apiData.drinks);
+        const filtredArr = apiData.drinks
+          .filter((el, index) => index <= MAX_RECOMENDATION_ELEMENTS);
+        setRecomendation(filtredArr);
       }
     } catch (error) {
       global.alert('erro');
