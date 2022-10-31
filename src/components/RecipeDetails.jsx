@@ -55,14 +55,12 @@ export default function RecipeDetails({ apiType, id }) {
   };
 
   useEffect(() => {
-    console.log(favoriteRecipes);
     localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
   }, [favoriteRecipes]);
 
   const handleFavoriteButton = () => {
     if ((favoriteRecipes.some((el) => el.id === id))) {
       const newFiltred = favoriteRecipes.filter((el) => el.id !== id);
-      console.log('atual favRecipes', favoriteRecipes);
       setFavoriteRecipes(newFiltred);
     } else {
       const saveFavRecipe = [...favoriteRecipes, {
