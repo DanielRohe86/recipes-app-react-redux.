@@ -4,7 +4,8 @@ import copy from 'clipboard-copy';
 import React, { useContext, useEffect, useState } from 'react';
 import MyContext from '../context/MyContext';
 import shareImg from '../images/shareIcon.svg';
-import favoriteWhiteHeart from '../images/whiteHeartIcon.svg';
+import whiteHeartIcon from '../images/whiteHeartIcon.svg';
+import blackHeartIcon from '../images/blackHeartIcon.svg';
 
 const time = 3000;
 const menosUm = -1;
@@ -14,10 +15,16 @@ export default function RecipeDetails({ apiType, id }) {
   const [doneRe, setDoneRecipes] = useState([]);
   const [showCopyMessage, setShowCopyMessage] = useState(false);
   const [inProgress, setInProgress] = useState([]);
+  const [favoriteRecipes, setFavoriteRecipes] = useState([]);
 
   useEffect(() => {
     setDoneRecipes(JSON.parse(localStorage.getItem('doneRecipes')));
     setInProgress(JSON.parse(localStorage.getItem('inProgressRecipes')));
+    if (!JSON.parse(localStorage.getItem('favoriteRecipes'))) {
+      localStorage.setItem('favoriteRecipes', JSON.stringify([]));
+    } else {
+      setFavoriteRecipes(JSON.parse(localStorage.getItem('favoriteRecipes')));
+    }
   }, []);
 
   const other = apiType === 'Meal' ? 'Drink' : 'Meal';
@@ -46,21 +53,29 @@ export default function RecipeDetails({ apiType, id }) {
     copy(`http://localhost:3000${history.location.pathname}`);
     setTimeout(() => setShowCopyMessage(false), time);
   };
+
+  useEffect(() => {
+    console.log(favoriteRecipes);
+    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
+  }, [favoriteRecipes]);
+
   const handleFavoriteButton = () => {
-    const currentFav = JSON
-      .parse(localStorage
-        .getItem('favoriteRecipes')) ? JSON
-        .parse(localStorage.getItem('favoriteRecipes')) : [];
-    const saveFavRecipe = [...currentFav, {
-      id: singleData[0][`id${apiType}`],
-      type: nameApiType.slice(0, menosUm),
-      nationality: singleData[0].strArea ? singleData[0].strArea : '',
-      category: singleData[0].strCategory,
-      alcoholicOrNot: singleData[0].strAlcoholic ? singleData[0].strAlcoholic : '',
-      name: singleData[0][`str${apiType}`],
-      image: singleData[0][`str${apiType}Thumb`],
-    }];
-    localStorage.setItem('favoriteRecipes', JSON.stringify(saveFavRecipe));
+    if ((favoriteRecipes.some((el) => el.id === id))) {
+      const newFiltred = favoriteRecipes.filter((el) => el.id !== id);
+      console.log('atual favRecipes', favoriteRecipes);
+      setFavoriteRecipes(newFiltred);
+    } else {
+      const saveFavRecipe = [...favoriteRecipes, {
+        id: singleData[0][`id${apiType}`],
+        type: nameApiType.slice(0, menosUm),
+        nationality: singleData[0].strArea ? singleData[0].strArea : '',
+        category: singleData[0].strCategory,
+        alcoholicOrNot: singleData[0].strAlcoholic ? singleData[0].strAlcoholic : '',
+        name: singleData[0][`str${apiType}`],
+        image: singleData[0][`str${apiType}Thumb`],
+      }];
+      setFavoriteRecipes(saveFavRecipe);
+    }
   };
 
   return (
@@ -102,8 +117,15 @@ export default function RecipeDetails({ apiType, id }) {
         <img src={ shareImg } alt="compartilhar" />
       </button>
 
-      <button type="button" data-testid="favorite-btn" onClick={ handleFavoriteButton }>
-        <img src={ favoriteWhiteHeart } alt="favoritar" />
+      <button type="button" onClick={ handleFavoriteButton }>
+        <img
+          data-testid="favorite-btn"
+          src={
+            (favoriteRecipes
+              .some((el) => el.id === id)) ? blackHeartIcon : whiteHeartIcon
+          }
+          alt="favoritar"
+        />
       </button>
 
       <div className="carousel">
