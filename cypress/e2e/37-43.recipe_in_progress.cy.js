@@ -48,7 +48,7 @@ describe('38 - Desenvolva um checkbox para cada item da lista de ingredientes', 
         win.fetch = fetchMock;
       },
     });
-
+    
     cy.get('[data-testid*="ingredient-step"]')
       .find('input[type="checkbox"]')
       .should('have.length', 8);
