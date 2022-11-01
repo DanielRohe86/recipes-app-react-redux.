@@ -67,7 +67,7 @@ export default function DoneRecipes() {
         { showCopyMessage && (
           <p>Link copied!</p>
         )}
-        {doneRecipes.map((el, index) => (
+        {doneRecipes?.map((el, index) => (
           <div key={ el.name }>
             <button type="button" onClick={ () => goToDetailPage(el) }>
               <img
