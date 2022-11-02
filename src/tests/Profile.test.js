@@ -54,6 +54,7 @@ describe('Teste o componente <Profile.js />', () => {
   //   const initialFalseLocalStorage = JSON.parse(localStorage.getItem('user'));
   //   expect(initialFalseLocalStorage).toBeFalsy();
   // });
+  // oi
 
   it('tests local storage-related functions part 3 - logout', async () => {
     renderWithRouter(<App />, { initialEntries: ['/profile'] });
