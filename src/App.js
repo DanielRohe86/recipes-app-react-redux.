@@ -10,7 +10,7 @@ import MealRecipe from './pages/MealRecipe';
 import MealRecipeInProgress from './pages/MealRecipeInProgress';
 import DrinkRecipe from './pages/DrinkRecipe';
 import DrinkRecipeInProgress from './pages/DrinkRecipeInProgress';
-import Profile from './pages/Profile';
+import ProfilePage from './pages/ProfilePage';
 import DoneRecipes from './pages/DoneRecipes';
 import FavoriteRecipes from './pages/FavoriteRecipes';
 
@@ -57,7 +57,7 @@ function App() {
           <Route
             exact
             path="/profile"
-            render={ (props) => <Profile { ...props } /> }
+            render={ (props) => <ProfilePage { ...props } /> }
           />
           <Route
             exact
