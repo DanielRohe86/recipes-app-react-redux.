@@ -1,16 +1,45 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderWithRouter } from './helpers/renderWith';
-import Meal from '../pages/Meals';
+import meals from './mock/mealsMock';
+import App from '../App';
 
 describe('Testando Filter', () => {
-  test('Testando botão de perfil', async () => {
-    const { history } = renderWithRouter(<Meal />);
-    const filterOptionBeef = await screen.findByTestId('Beef-category-filter', {}, { timeout: 5000 });
-    expect(filterOptionBeef).toBeInTheDocument();
-    expect(await screen.findByTestId('0-card-name', {}, { timeout: 5000 })).toBeInTheDocument();
-    expect(await screen.findByTestId('0-card-img')).toBeInTheDocument();
-    userEvent.click(screen.getByTestId('0-card-button'));
-    expect(history.location.pathname).toBe('/meals/52977');
+  beforeEach(() => {
+    global.alert = jest.fn().mockReturnValue('Your search must have only 1 (one) character');
+
+    global.fetch = jest.fn()
+      .mockResolvedValueOnce({
+        json: jest.fn().mockResolvedValue(meals),
+      });
+  });
+  it('Testando o alerta do firstLetter com a pesquisa com mais de uma letra', async () => {
+    const { history } = renderWithRouter(<App />, { initialEntries: ['/meals'] });
+    expect(history.location.pathname).toBe('/meals');
+
+    const buttonSearch = screen.getByTestId('search-top-btn');
+    expect(buttonSearch).toBeInTheDocument();
+    userEvent.click(buttonSearch);
+
+    const firstLetter = screen.getByTestId('first-letter-search-radio');
+    expect(firstLetter).toBeInTheDocument();
+    userEvent.click(firstLetter);
+
+    const text = screen.getByRole('textbox');
+    expect(text).toBeInTheDocument();
+
+    userEvent.type(text, 'Breakfast');
+
+    const search = screen.getByTestId('exec-search-btn');
+    expect(search).toBeInTheDocument();
+    userEvent.click(search);
+
+    expect(global.alert()).toBe('Your search must have only 1 (one) character');
+    expect(global.alert).toHaveBeenCalledTimes(2);
+  });
+
+  it('Testando a renderização da pesquisa do First letter', () => {
+    const { history } = renderWithRouter(<App />, { initialEntries: ['/meals'] });
+    expect(history.location.pathname).toBe('/meals');
   });
 });

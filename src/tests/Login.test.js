@@ -31,6 +31,5 @@ describe('Testa a página de Login', () => {
 
     expect(history.location.pathname).toBe('/');
     userEvent.click(btnEnter);
-    // expect(history.location.pathname).toBe('/meals');
   });
 });
