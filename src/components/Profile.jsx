@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Profile() {
   const [email, setEmail] = useState([]);
 
-useEffect(() => {
+  useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
     setEmail(user);
   }, []);
