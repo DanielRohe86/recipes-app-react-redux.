@@ -4,14 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Profile() {
   const [email, setEmail] = useState([]);
 
-  // useEffect(() => { VERSÃO ANTIGA - NÃO FUNCIONA, QUEBRA O TESTE
-  //   const user = JSON.parse(localStorage.getItem('user'));
-  //   if (user) {
-  //     setEmail(user);
-  //   }
-  // }, []);
-
-  useEffect(() => {
+useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
     setEmail(user);
   }, []);
