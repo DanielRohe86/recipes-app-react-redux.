@@ -1,276 +1,276 @@
-# Boas-vindas ao repositório do projeto App de Receitas!
+# Welcome to the Recipes App project repository!
 
-Para realizar o projeto, atente-se a cada passo descrito a seguir. Se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
+To carry out the project, pay attention to each step described below. If you have any questions, send them to us via _Slack_! #vqv 🚀
 
-Aqui, você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
+Here, you will find details on how to structure the development of your project from this repository, using a specific branch and a _Pull Request_ to place your codes.
 
-# Termos e acordos
+# Terms and agreements
 
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta e do Manual da Pessoa Estudante da Trybe.
+By starting this project, you agree to the guidelines of Trybe's Code of Conduct and Student Handbook.
 
-# Entregáveis
+# Deliverables
 
 <details>
-  <summary><strong>🤷🏽‍♀️ Como entregar</strong></summary><br />
+   <summary><strong>🤷🏽‍♀️ How to deliver</strong></summary><br />
 
-  Para entregar o seu projeto você deverá criar um *Pull Request* neste repositório.
+   To deliver your project you must create a *Pull Request* in this repository.
 
-  Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/4d67f5b4-34a6-489f-a205-b6c7dc50fc16/) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
+   Remember that you can consult our content on [Git & GitHub](https://app.betrybe.com/course/4d67f5b4-34a6-489f-a205-b6c7dc50fc16/) and our [Blog - Git & GitHub](https ://blog.betrybe.com/tecnologia/git-e-github/) whenever you need it!
 </details>
 
 <details>
-  <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
+   <summary><strong>👨‍💻 What should be developed</strong></summary><br />
 
-  Você irá desenvolver um app de receitas, utilizando o que há de mais moderno dentro do ecossistema React: Hooks e Context API!
+   You will develop a recipe app, using the most modern features within the React ecosystem: Hooks and Context API!
 
-  Nele será possível: ver, buscar, filtrar, favoritar e acompanhar o progresso de preparação de receitas de comidas e bebidas!
+   It will be possible to: view, search, filter, favorite and monitor the progress of preparing food and drink recipes!
 
-  ⚠️ A base de dados serão 2 APIs distintas, uma para comidas e outra para bebidas.
+   ⚠️ The database will be 2 different APIs, one for food and one for drinks.
 
-  O layout tem como foco dispositivos móveis, dessa forma todos os protótipos vão estar desenvolvidos em telas menores.
+   The layout focuses on mobile devices, so all prototypes will be developed on smaller screens.
 </details>
 
 <details>
-  <summary><strong>:memo: Habilidades</strong></summary><br />
+   <summary><strong>:memo: Skills</strong></summary><br />
 
-  Nesse projeto, você será capaz de:
+   In this project, you will be able to:
 
-  - Utilizar _Redux_ para gerenciar estado
-  - Utilizar a biblioteca _React-Redux_
-  - Utilizar a Context API do _React_ para gerenciar estado
-  - Utilizar o _React Hook useState_
-  - Utilizar o _React Hook useContext_
-  - Utilizar o _React Hook useEffect_
-  - Criar Hooks customizados
+   - Use _Redux_ to manage state
+   - Use the _React-Redux_ library
+   - Use the _React_ Context API to manage state
+   - Use the _React Hook useState_
+   - Use the _React Hook useContext_
+   - Use the _React Hook useEffect_
+   - Create custom Hooks
 </details>
 
 <details>
-  <summary><strong>🗓 Data de Entrega</strong></summary><br />
+   <summary><strong>🗓 Delivery Date</strong></summary><br />
   
-  * Este projeto é em grupo;
-  * Serão `9` dias de projeto;
-  * Data para entrega final do projeto: `11/11/2022 14:00`.
+   * This project is a group project;
+   * There will be `9` days of project;
+   * Date for final delivery of the project: `11/11/2022 14:00`.
 
 </details><br />
 
-# Orientações
+# Guidelines
 
 <details>
-  <summary><strong>‼️ Antes de começar a desenvolver</strong></summary><br />
+   <summary><strong>‼️ Before you start developing</strong></summary><br />
 
-  1. Clone o repositório
+   1. Clone the repository
 
-  - Use o comando: `git clone git@github.com:tryber/sd-024-a-project-recipes-app.git`.
-  - Entre na pasta do repositório que você acabou de clonar:
-    - `cd sd-024-a-project-recipes-app`
-  - Vá para a branch do seu grupo:
-    - `git checkout main-group-XX && git pull`, onde `XX` é o número do seu grupo. Exemplos: `main-group-1`, `main-group-22`.
+   - Use the command: `git clone git@github.com:tryber/sd-024-a-project-recipes-app.git`.
+   - Go to the repository folder you just cloned:
+     - `cd sd-024-a-project-recipes-app`
+   - Go to your group branch:
+     - `git checkout main-group-XX && git pull`, where `XX` is your group number. Examples: `main-group-1`, `main-group-22`.
 
-  2. Instale as dependências e inicialize o projeto
+   2. Install dependencies and initialize the project
 
-  - Instale as dependências:
-    - `npm install`
-  - Inicialize o projeto:
-    - `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
+   - Install dependencies:
+     - `npm install`
+   - Initialize the project:
+     - `npm start` (a new page should open in your browser with plain text)
   
-  3. Faça alterações separadas por novas branchs criadas a partir da branch `main-group-XX`, criando uma nova branch para cada demanda
+   3. Make changes separated by new branches created from the `main-group-XX` branch, creating a new branch for each demand
 
-  - Verifique que você está na branch `main-group-XX`
-    - Exemplo: `git branch`
-  - Se não estiver, mude para a branch `main-group-XX`
-    - Exemplo: `git checkout main-group-XX && git pull`
-  - Agora, crie uma branch para a demanda que você vai desenvolver do seu projeto
-    - Você deve criar uma branch com uma breve descrição da demanda a ser desenvolvida
-    - Exemplo: `git checkout -b main-group-XX-cria-campo-de-busca`
+   - Check that you are on the `main-group-XX` branch
+     - Example: `git branch`
+   - If not, switch to the `main-group-XX` branch
+     - Example: `git checkout main-group-XX && git pull`
+   - Now, create a branch for the demand you will develop for your project
+     - You must create a branch with a brief description of the demand to be developed
+     - Example: `git checkout -b main-group-XX-create-search-field`
 
-  4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
+   4. Add changes to Git _stage_ and `commit`
 
-  - Verifique que as mudanças ainda não estão no _stage_
-    - Exemplo: `git status` (devem aparecer listadas as novas alterações em vermelho)
-  - Adicione o novo arquivo ao _stage_ do Git
-    - Exemplo:
-      - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-      - `git status` (devem aparecer listadas as novas alterações em verde)
-  - Faça o `commit`
-    - Exemplo:
-      - `git commit -m 'cria componente de busca'` (fazendo o primeiro commit)
-      - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+   - Check that the changes are not yet in _stage_
+     - Example: `git status` (new changes should be listed in red)
+   - Add the new file to Git _stage_
+     - Example:
+       - `git add .` (adding all changes - _that were in red_ - to the Git stage)
+       - `git status` (new changes should appear listed in green)
+   - Make the `commit`
+     - Example:
+       - `git commit -m 'create search component'` (making the first commit)
+       - `git status` (a message like _nothing to commit_ should appear)
 
-  5. Adicione a sua branch com o novo `commit` ao repositório remoto
+   5. Add your branch with the new `commit` to the remote repository
 
-  - Usando o exemplo anterior: `git push -u origin main-group-XX-cria-campo-de-busca`
+   - Using the previous example: `git push -u origin main-group-XX-creates-search-field`
 
-  6. Crie um novo `Pull Request` _(PR)_
+   6. Create a new `Pull Request` _(PR)_
 
-  - Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-024-a-project-recipes-app/pulls)
-  - Clique no botão verde _"New pull request"_
-  - Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  - Coloque um título para a sua _Pull Request_
-    - Exemplo: _"[GRUPO XX] Cria tela de busca"_
-  - Clique no botão verde _"Create pull request"_
-  - Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  - **Não se preocupe em preencher mais nada por enquanto!**
-  - Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-024-a-project-recipes-app/pulls) e confira que o seu _Pull Request_ está criado
-
-  7. Assim que aprovado por pelo menos uma pessoa do seu grupo e o _Linter_ estiver adereçado, acesse **SEU** _Pull Request_ e clique no botão _"Merge pull request"_
-
-</details>
-
-<details>
-  <summary><strong>⌨️ Durante o desenvolvimento</strong></summary><br />
-
-  - ⚠ **LEMBRE-SE DE CRIAR TODOS OS ARQUIVOS DENTRO DA PASTA COM O SEU NOME** ⚠
-
-  - Faça `commits` das alterações que você fizer no código regularmente
-
-  - Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
-
-  - Os comandos que você utilizará com mais frequência são:
-    1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-    2. `git add` _(para adicionar arquivos ao stage do Git)_
-    3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-    4. `git push -u origin nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-    5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
+   - Go to the _Pull Requests_ page of [GitHub repository](https://github.com/tryber/sd-024-a-project-recipes-app/pulls)
+   - Click on the green _"New pull request"_ button
+   - Click on the _"Compare"_ checkbox and choose your branch **carefully**
+   - Put a title for your _Pull Request_
+     - Example: _"[GROUP XX] Create search screen"_
+   - Click on the green _"Create pull request"_ button
+   - Add a description for the _Pull Request_ and click the green _"Create pull request"_ button
+   - **Don't worry about filling out anything else for now!**
+   - Go back to the [repository's _Pull Requests_ page](https://github.com/tryber/sd-024-a-project-recipes-app/pulls) and check that your _Pull Request_ is created
+   
+   7. Once approved by at least one person in your group and the _Linter_ is supported, access **YOUR** _Pull Request_ and click on the _"Merge pull request"_ button
 
 </details>
 
 <details>
-  <summary><strong>🤝 Depois de terminar o desenvolvimento (opcional)</strong></summary><br />
+   <summary><strong>⌨️ During development</strong></summary><br />
 
-  Para sinalizar que o seu projeto está pronto para o _"Code Review"_, faça o seguinte:
+   - ⚠ **REMEMBER TO CREATE ALL FILES INSIDE THE FOLDER WITH YOUR NAME** ⚠
 
-  - Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+   - Commit changes you make to the code regularly
 
-    - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+   - Remember to always after one (or a few) `commits` update the remote repository
 
-    - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-    - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-024-a`.
-
-  Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
-</details>
-
-<details>
-  <summary><strong>🕵🏿 Revisando um pull request</strong></summary><br />
-
-  Use o conteúdo sobre [Code Review](https://app.betrybe.com/course/real-life-engineer/code-review) para te ajudar a revisar os _Pull Requests_.
+   - The commands you will use most frequently are:
+     1. `git status` _(to check what is in red - out of stage - and what is in green - on stage)_
+     2. `git add` _(to add files to the Git stage)_
+     3. `git commit` _(to create a commit with the files that are in the Git stage)_
+     4. `git push -u origin branch-name` _(to push the commit to the remote repository the first time you `push` a new branch)_
+     5. `git push` _(to push the commit to the remote repository after the previous step)_
 
 </details>
 
 <details>
-  <summary><strong>🎛 Linter e Stylelint</strong></summary><br />
+   <summary><strong>🤝 After finishing development (optional)</strong></summary><br />
 
-  Usaremos o [ESLint](https://eslint.org/) para fazer a análise estática do seu código.
+   To signal that your project is ready for _"Code Review"_, do the following:
 
-  Para garantir a qualidade do seu código de forma a tê-lo mais legível, de mais fácil manutenção e seguindo as boas práticas de desenvolvimento, nós utilizamos neste projeto o linter `ESLint`. Para rodar o linter localmente no seu projeto, execute o comando abaixo:
+   - Go to the **YOUR** _Pull Request_ page, add the _"code-review"_ label and tag your colleagues:
 
-  ```bash
-  npm run lint
-  npm run lint:styles
-  ```
+     - In the menu on the right, click on the _link_ **"Labels"** and choose the _label_ **code-review**;
 
-  Caso ainda fique alguma dúvida, você pode consultar nosso conteúdo sobre [`ESLint`](https://app.betrybe.com/course/real-life-engineer/eslint)
+     - In the menu on the right, click on the _link_ **"Assignees"** and choose **your username**;
 
-  **PULL REQUESTS COM ERROS DE LINTER NÃO SERÃO AVALIADAS. ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
+     - In the menu on the right, click on the _link_ **"Reviewers"** and type `students`, select the team `tryber/students-sd-024-a`.
 
-  Você pode também instalar o plugin do `ESLint` no `VSCode`, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+   If you have any questions, [here is an explanatory video](https://vimeo.com/362189205).
+
 </details>
 
 <details>
-  <summary><strong>:busts_in_silhouette: Trello como ferramenta Kanban</strong></summary><br />
+   <summary><strong>🕵🏿 Reviewing a pull request</strong></summary><br />
 
-  Uma forma para seu grupo organizar as atividades e dividir as tarefas é através de um modelo de kanban. A Trybe disponibiliza um [board pré-configurado para vocês](https://trello.com/b/RojqC6yx/app-de-receitas) duplicarem no [Trello](https://trello.com/).
+   Use the content about [Code Review](https://app.betrybe.com/course/real-life-engineer/code-review) to help you review _Pull Requests_.
 
-  Para duplicar, basta seguir os passos:
-
-  - Acesse o [link do board](https://trello.com/b/RojqC6yx/app-de-receitas)
-  - Abra o menu no canto superior direito
-  - Selecione "copiar quadros"
-  - Defina o time do seu grupo e um título para o board
-  - Clique em `criar`
-  - Personalize seu novo kanban!
 </details>
 
 <details>
-  <summary><strong>🛠 Testes</strong></summary><br />
+   <summary><strong>🎛 Linter and Stylelint</strong></summary><br />
 
-  <details><summary><strong>Executando testes de requisito :building_construction:</strong></summary><br />
+   We will use [ESLint](https://eslint.org/) to do static analysis of your code.
+
+   To ensure the quality of your code so that it is more readable, easier to maintain and follows good development practices, we use the `ESLint` linter in this project. To run the linter locally in your project, run the command below:
+
+   ```bash
+   npm run lint
+   npm run lint:styles
+   ```
+
+   If you still have any questions, you can consult our content on [`ESLint`](https://app.betrybe.com/course/real-life-engineer/eslint)
+
+   **PULL REQUESTS WITH LINTER ERRORS WILL NOT BE EVALUATED. BE CAREFUL TO RESOLVE THEM BEFORE COMPLETING THE DEVELOPMENT!** ⚠
+
+   You can also install the `ESLint` plugin in `VSCode`, just go to extensions and download the [`ESLint` plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+</details>
+
+<details>
+   <summary><strong>:busts_in_silhouette: Trello as a Kanban tool</strong></summary><br />
+
+   One way for your group to organize activities and divide tasks is through a kanban model. Trybe provides a pre-configured [board for you](https://trello.com/b/RojqC6yx/app-de-receitas) to duplicate on [Trello](https://trello.com/).
+
+   To duplicate, just follow the steps:
+
+   - Access [board link](https://trello.com/b/RojqC6yx/app-de-receitas)
+   - Open the menu in the top right corner
+   - Select "copy frames"
+   - Set your group team and a title for the board
+   - Click `create`
+   - Customize your new kanban!
+</details>
+
+<details>
+   <summary><strong>🛠 Tests</strong></summary><br />
+
+   <details><summary><strong>Running requirement tests :building_construction:</strong></summary><br />
   
-  Para o projeto ser validado, todos os testes de comportamento devem passar. É possível testar isso local rodando `npm run cy`. Esse comando roda a suite de testes do Cypress que valida se o fluxo geral e os requisitos funcionais estão funcionando como deveriam. Você pode também executar o comando `npm run cy:open` para ter um resultado visual dos testes executados.
+   For the project to be validated, all behavioral tests must pass. You can test this locally by running `npm run cy`. This command runs the Cypress test suite that validates that the overall flow and functional requirements are working as they should. You can also run the `npm run cy:open` command to have a visual result of the tests run.
 
-  Esses testes não consideram o layout de maneira geral, mas sim os atributos e informações corretas, então preste atenção nisso! Os testes te darão uma mensagem de erro caso não estejam passando (seja qual for o motivo). 😉
+   These tests do not consider the layout in general, but rather the correct attributes and information, so pay attention to that! The tests will give you an error message if they are not passing (for whatever reason). 😉
 
-  ⚠️ **Atenção:** Sua aplicação deve estar rodando para o Cypress no terminal poder testar.
+   ⚠️ **Attention:** Your application must be running for Cypress in the terminal to be able to test.
+   
+   ### Tip: disabling tests
 
-  ### Dica: desativando testes
+   To run just one test file, you need to use the command:
 
-  Para rodar somente um arquivo de teste, você precisa utilizar o comando:
+   `npm run cy -- --spec cypress/integration/login_spec.js`
 
-  `npm run cy -- --spec cypress/integration/login_spec.js`
+   **Note**: after the "spec" you need to add the entire path to the tests file.
 
-  **Obs**: após o "spec" é preciso acrescentar todo o caminho até o arquivo de testes.
+   To run just one test, simply use the `.only` function after `describe`. With this, it will be possible for only one requirement to run locally and be evaluated.
 
-  Para rodar apenas um teste, basta utilizar a função `.only` após o `describe`. Com isso, será possível que apenas um requisito rode localmente e seja avaliado.
+   ![image](describe-only.png)
+   ![image](only-all-green.png)
 
-  ![image](describe-only.png)
-  ![image](only-all-green.png)
+   > ⚠️ The automatic evaluator does not necessarily evaluate your project in the order in which the requirements appear in the readme. This is to make the evaluation process faster. So don't be alarmed if this happens, okay?
+   </details>
 
-  > ⚠️ O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então não se assuste se isso acontecer, ok?
-  </details>
+   <details><summary><strong>Running coverage tests :open_umbrella:</strong></summary><br />
+   Some requirements will ask you to develop tests for your application. These tests will be evaluated through test coverage.
 
-  <details><summary><strong>Executando testes de cobertura :open_umbrella:</strong></summary><br />
-  Alguns requisitos irão pedir para que você desenvolva testes para sua aplicação. Esses testes serão avaliados através da cobertura de testes.
+   You can check the test coverage percentage with the `npm run test-coverage` command.
 
-  É possível verificar o percentual da cobertura de testes com o comando `npm run test-coverage`. 
+   You can also run `npm run test-coverage -- --collectCoverageFrom=path/of/Page` to check the percentage of test coverage for each 'Page'. For example, to check the test coverage of the `Login` page, run the command `npm run test-coverage -- --collectCoverageFrom=src/pages/Login.js`.
 
-  Você também pode executar `npm run test-coverage -- --collectCoverageFrom=caminho/da/Pagina` para verificar o percentual de cobertura de testes de cada 'Pagina'. Por exemplo, para verificar a cobertura de testes da página de `Login`, execute o comando `npm run test-coverage -- --collectCoverageFrom=src/pages/Login.js`.
-
-  </details>
+   </details>
 </details>
 
 <details>
-  <summary><strong>:convenience_store: Desenvolvimento </strong></summary><br />
+   <summary><strong>:convenience_store: Development </strong></summary><br />
 
-  * <details><summary><b> Como desenvolver :technologist:</b></summary>
+   * <details><summary><b> How to develop :technologist:</b></summary>
 
-    Este repositório **já conta com uma `main-group` para cada grupo**, identificada como `main-group-1` para o grupo 1, `main-group-2` para o grupo 2, e assim por diante. Para desenvolver, você sempre deve:
+     This repository **already has a `main-group` for each group**, identified as `main-group-1` for group 1, `main-group-2` for group 2, and so on. To develop, you must always:
 
-      * **Criar sua branch de desenvolvimento a partir da sua branch main**. Para isso, clone este repositório, faça o `git checkout main-group-XX && git pull` e em seguida o `git checkout -b main-group-XX-minha-feature`.
-      * Para criar uma Pull Request para fazer **Code Review**, intitule-a `[GRUPO XX] Meu título` e **sempre aponte a Pull Request da sua branch para a branch `main-group-XX` do seu grupo, como no exemplo abaixo:**
+       * **Create your development branch from your main branch**. To do this, clone this repository, do `git checkout main-group-XX && git pull` and then `git checkout -b main-group-XX-minha-feature`.
+       * To create a Pull Request to do **Code Review**, title it `[GRUPO XX] My title` and **always point your branch's Pull Request to your group's `main-group-XX` branch , as in the example below:**
 
-    <details><summary> Exemplo de como apontar um PR para a branch main do grupo</summary>
+     <details><summary> Example of how to point a PR to the group's main branch</summary>
 
-      ![Exemplo de como apontar uma Pull Request para a branch main do grupo](pull-request-para-branch-do-grupo.png)
-    </details>
+       ![Example of how to point a Pull Request to the group's main branch](pull-request-para-branch-do-grupo.png)
+     </details>
 
-      * Quando várias pessoas desenvolvem para um mesmo projeto podem ocorrer **conflitos de merge** que precisarão ser resolvidos. Prestem atenção a isso!
+       * When several people develop for the same project, **merge conflicts** may occur and will need to be resolved. Pay attention to this!
 
-      ⚠ **ATENÇÃO! É POSSÍVEL COMMITAR, POR ENGANO, NA BRANCH DE OUTRO GRUPO, ENTÃO TOME MUITO CUIDADO** ⚠
+       ⚠ **ATTENTION! IT IS POSSIBLE TO MAKE A MISTAKE IN ANOTHER GROUP'S BRANCH, SO BE VERY CAREFUL** ⚠
 
-      Você verá que os requisitos do projeto possuem, além das observações técnicas e do que será validado, descrições tais quais se veriam em um projeto real. É muito importante ser capaz de ler descrições como essa e transformá-las em produtos ou, se houver dúvida, saber tirá-las! Seguimos à disposição no Slack para isso.
+       You will see that the project requirements have, in addition to technical observations and what will be validated, descriptions such as would be seen in a real project. It is very important to be able to read descriptions like this and transform them into products or, if in doubt, know how to remove them! We remain available on Slack for this.
 
-      Este repositório já contem um _template_ com um App React criado, configurado e com os testes automatizados que fazem parte da correção. Ele também conta com uma branch **main-group** para cada grupo, identificada como `main-group-1` para o grupo 1, `main-group-2` para o grupo 2 e assim por diante.
+       This repository already contains a _template_ with a React App created, configured and with the automated tests that are part of the correction. It also has a **main-group** branch for each group, identified as `main-group-1` for group 1, `main-group-2` for group 2, and so on.
 
-      **⚠️ Lembre-se de escrever testes unitários e sinta-se livre para alterar a UI do protótipo, só respeite os atributos `data-testid`, eles serão usados na correção do exercício.**
-    </details>
+       **⚠️ Remember to write unit tests and feel free to change the prototype UI, just respect the `data-testid` attributes, they will be used to correct the exercise.**
+     </details>
 
-  * <details><summary><b> APIs :gear:</b></summary><br/>
+   * <details><summary><b> APIs :gear:</b></summary><br/>
 
-    🚨 **IMPORTANTE**
+     🚨 **IMPORTANT**
 
-    Para fazer as requisições, você deve utilizar apenas o `fetch`!! Outros bibliotecas como o Axios podem causar problemas no avaliador.
+     To make requests, you must only use `fetch`!! Other libraries like Axios can cause problems with the evaluator.
 
-    * <details><summary><b> TheMealDB API</b></summary>
+     * <details><summary><b> TheMealDB API</b></summary>
 
-      O [TheMealDB](https://www.themealdb.com/) é um banco de dados aberto, mantido pela comunidade, com receitas e ingredientes de todo o mundo.
+       [TheMealDB](https://www.themealdb.com/) is an open, community-maintained database of recipes and ingredients from around the world.
 
-      Os end-points são bastante ricos, você pode [vê-los aqui](https://www.themealdb.com/api.php)
+       The end-points are quite rich, you can [see them here](https://www.themealdb.com/api.php)
 
-      O modelo de resposta para uma `meal` é o seguinte:
-        <details><summary><b>Ver modelo de resposta para uma meal</b></summary>
-
-        ```json
+       The response model for a `meal` is as follows:
+         <details><summary><b>See model answer for a meal</b></summary>
+         
+         ```json
           {
             "meals":[
                 {
@@ -330,36 +330,36 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
           }
         ```
       </details>
-    
-      Os ingredientes seguem uma ordem lógica onde o nome dele (<code>strIngredient1</code>) e a quantidade (<code>strMeasure1</code>) tem o mesmo número no final (1, nesse caso).
+      
+      The ingredients follow a logical order where its name (<code>strIngredient1</code>) and quantity (<code>strMeasure1</code>) have the same number at the end (1, in this case).
 
-      É possível listar todas as `categorias`, `nacionalidades` (vindas da API como "areas") e `ingredientes`:
+       It is possible to list all `categories`, `nationalities` (coming from the API as "areas") and `ingredients`:
 
-      ```
-      categorias: https://www.themealdb.com/api/json/v1/1/list.php?c=list
-      nacionalidades: https://www.themealdb.com/api/json/v1/1/list.php?a=list
-      ingredientes: https://www.themealdb.com/api/json/v1/1/list.php?i=list
-      ```
+       ```
+       categories: https://www.themealdb.com/api/json/v1/1/list.php?c=list
+       nationalities: https://www.themealdb.com/api/json/v1/1/list.php?a=list
+       ingredients: https://www.themealdb.com/api/json/v1/1/list.php?i=list
+       ```
 
-      As fotos dos ingredientes vêm de um end-point padronizado com a seguinte lógica:
+       The ingredient photos come from a standardized end-point with the following logic:
 
-      ```
-      https://www.themealdb.com/images/ingredients/{nome-do-ingrediente}-Small.png
-      // exemplo com "Lime"
-      https://www.themealdb.com/images/ingredients/Lime-Small.png
-      ```
-      </details>
+       ```
+       https://www.themealdb.com/images/ingredients/{ingredient-name}-Small.png
+       // example with "Lime"
+       https://www.themealdb.com/images/ingredients/Lime-Small.png
+       ```
+       </details>
 
-    * <details><summary><b> The CockTailDB API</b></summary>
-      Bem similar (inclusive mantida pela mesma entidade) a TheMealDB API, só que focado em bebidas.
+     * <details><summary><b> The CockTailDB API</b></summary>
+       Very similar (even maintained by the same entity) to TheMealDB API, but focused on drinks.
 
-      Os end-points também são bastante ricos, você pode [vê-los aqui](https://www.thecocktaildb.com/api.php)
+       The end-points are also quite rich, you can [see them here](https://www.thecocktaildb.com/api.php)
 
-      As respostas seguem a mesma estrutura, com algumas particularidades relativas às bebidas (como ser ou não alcoólica, por exemplo)
+       The answers follow the same structure, with some particularities relating to drinks (such as whether or not they are alcoholic, for example)
 
-        <details><summary><b>Ver modelo de resposta para drinks</b></summary>
-
-        ```json
+         <details><summary><b>See model answer for drinks</b></summary>
+         
+         ```json
           {
             "drinks":[
                 {
@@ -421,1463 +421,1459 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
           }
         ```
         </details>
-      Os ingredientes seguem uma ordem lógica onde o nome dele (<code>strIngredient1</code>) e a quantidade (<code>strMeasure1</code>) tem o mesmo número no final (1, nesse caso).
-      </details>
-    </details>
+        
+        The ingredients follow a logical order where its name (<code>strIngredient1</code>) and quantity (<code>strMeasure1</code>) have the same number at the end (1, in this case).
+       </details>
+     </details>
 
-  * <details><summary><b>Requisitos do Projeto :memo:</b></summary>
+   * <details><summary><b>Project Requirements :memo:</b></summary>
 
-    Os requisitos são organizados por telas e dessa vez, vocês que irão definir as prioridades! Usem com sabedoria!
+     The requirements are organized by screens and this time, you will define the priorities! Use wisely!
 
-    Recomendamos que os requisitos de uma mesma tela sejam feitos em sequência ou paralelamente por pessoas que irão comunicar-se bastante para que não haja conflitos. Requisitos de uma mesma tela com prioridades iguais possam ser feitos em paralelo, mas isso exigirá organização por parte das pessoas que estão dividindo a tarefa para não  haver conflitos.
+     We recommend that requirements for the same screen be done in sequence or in parallel by people who will communicate a lot so that there are no conflicts. Requirements for the same screen with equal priorities can be done in parallel, but this will require organization on the part of the people who are dividing the task to avoid conflicts.
 
-    * Os requisitos do seu projeto são avaliados automaticamente, sendo utilizada a resolução de tela de `360 x 640` (360 pixels de largura por 640 pixels de altura).
+     * Your project requirements are automatically evaluated, using a screen resolution of `360 x 640` (360 pixels wide by 640 pixels high).
 
-        - ⚠️ Logo, recomenda-se desenvolver seu projeto usando a mesma resolução, via instalação [deste plugin](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) do `Chrome` para facilitar a configuração da resolução. ⚠️
-    </details>
+         - ⚠️ Therefore, it is recommended to develop your project using the same resolution, by installing [this plugin](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) of `Chrome` to make it easier to configure the resolution. ⚠️
+     </details>
 
-  * <details><summary><b>Observações técnicas :information_source:</b></summary>
+   * <details><summary><b>Technical notes :information_source:</b></summary>
 
-    Algumas coisas devem seguir um padrão pré-estabelecido para que os testes de correção funcionem corretamente.
+     Some things must follow a pre-established pattern for patch tests to work correctly.
 
-    ⚠️ Leia-os atentamente e siga à risca o que for pedido. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação. ⚠️
+     ⚠️ Read them carefully and follow exactly what is asked. Failure to comply with a requirement, in whole or in part, will impact your assessment. ⚠️
 
-    * <details><summary><b> Rotas</b></summary>
+     * <details><summary><b> Routes</b></summary>
 
-      As rotas a serem utilizadas na aplicação devem ser as seguintes:
+       The routes to be used in the application must be the following:
 
-      * Tela de login: `/`;
-      * Tela principal de receitas de comidas: `/meals`;
-      * Tela principal de receitas de bebidas: `/drinks`;
-      * Tela de detalhes de uma receita de comida: `/meals/:id-da-receita`;
-      * Tela de detalhes de uma receita de bebida: `/drinks/:id-da-receita`;
-      * Tela de receita em progresso de comida: `/meals/:id-da-receita/in-progress`;
-      * Tela de receita em progresso de bebida: `/drinks/:id-da-receita/in-progress`;
-      * Tela de perfil: `/profile`;
-      * Tela de receitas feitas: `/done-recipes`;
-      * Tela de receitas favoritas: `/favorite-recipes`.
-      </details>
+       * Login screen: `/`;
+       * Main screen for food recipes: `/meals`;
+       * Drink recipes main screen: `/drinks`;
+       * Details screen for a food recipe: `/meals/:recipe-id`;
+       * Details screen for a drink recipe: `/drinks/:recipe-id`;
+       * Recipe screen in food progress: `/meals/:recipe-id/in-progress`;
+       * Drink recipe in progress screen: `/drinks/:recipe-id/in-progress`;
+       * Profile screen: `/profile`;
+       * Made recipes screen: `/done-recipes`;
+       * Favorite recipes screen: `/favorite-recipes`.
+       </details>
       
-    * <details><summary><b> LocalStorage</b></summary>
+     * <details><summary><b> LocalStorage</b></summary>
 
-      O uso de `localStorage` é necessário para que as informações não se percam caso a pessoa atualize a página. O correto é usar os valores para iniciar sua store ou seu context.
+       The use of `localStorage` is necessary so that the information is not lost if the person updates the page. The correct thing is to use the values to start your store or your context.
 
-      No `localStorage` do navegador:
+       In the browser's `localStorage`:
 
-      * a chave `user` deve conter a seguinte estrutura:
-      ```js
-      {
-          email: email-da-pessoa
-      }
-      ```
+       * the `user` key must contain the following structure:
+       ```js
+       {
+           email: person's email
+       }
+       ```
 
-      * a chave `doneRecipes` deve conter a seguinte estrutura:
-      ```js
-      [{
-          id: id-da-receita,
-          type: meal-ou-drink,
-          nationality: nacionalidade-da-receita-ou-texto-vazio,
-          category: categoria-da-receita-ou-texto-vazio,
-          alcoholicOrNot: alcoholic-ou-non-alcoholic-ou-texto-vazio,
-          name: nome-da-receita,
-          image: imagem-da-receita,
-          doneDate: quando-a-receita-foi-concluida,
-          tags: array-de-tags-da-receita-ou-array-vazio
-      }]
-      ```
+       * the `doneRecipes` key must contain the following structure:
+       ```js
+       [{
+           id: recipe-id,
+           type: meal-or-drink,
+           nationality: nationality-of-the-recipe-or-empty-text,
+           category: recipe-category-or-empty-text,
+           alcoholicOrNot: alcoholic-or-non-alcoholic-or-empty-text,
+           name: recipe-name,
+           image: recipe-image,
+           doneDate: when-the-recipe-was-completed,
+           tags: recipe-tags-array-or-empty-array
+       }]
+       ```
 
-      * a chave `favoriteRecipes` deve conter a seguinte estrutura:
-      ```js
-      [{
-          id: id-da-receita,
-          type: meal-ou-drink,
-          nationality: nacionalidade-da-receita-ou-texto-vazio,
-          category: categoria-da-receita-ou-texto-vazio,
-          alcoholicOrNot: alcoholic-ou-non-alcoholic-ou-texto-vazio,
-          name: nome-da-receita,
-          image: imagem-da-receita
-      }]
-      ```
+       * the `favoriteRecipes` key must contain the following structure:
+       ```js
+       [{
+           id: recipe-id,
+           type: meal-or-drink,
+           nationality: nationality-of-the-recipe-or-empty-text,
+           category: recipe-category-or-empty-text,
+           alcoholicOrNot: alcoholic-or-non-alcoholic-or-empty-text,
+           name: recipe-name,
+           image: recipe-image
+       }]
+       ```
 
-      * a chave `inProgressRecipes` deve conter a seguinte estrutura:
-      ```js
-      {
-          drinks: {
-              id-da-bebida: [lista-de-ingredientes-utilizados],
-              ...
-          },
-          meals: {
-              id-da-comida: [lista-de-ingredientes-utilizados],
-              ...
-          }
-      }
-      ```
+       * the `inProgressRecipes` key must contain the following structure:
+       ```js
+       {
+           drinks: {
+               drink-id: [list-of-ingredients-used],
+               ...
+           },
+           meals: {
+               food-id: [list-of-ingredients-used],
+               ...
+           }
+       }
+       ```
+       
+       **Technical observations**
 
-      **Observações técnicas**
-
-      * `id-da-bebida` e `id-da-comida` representam o ID de uma bebida e comida, respectivamente, e cada item da lista de ingredientes da respectiva receita deve ser representado apenas pelo número do ingrediente no formato numérico.
-      </details>
+       * `drink-id` and `food-id` represent the ID of a drink and food, respectively, and each item in the ingredient list of the respective recipe must be represented only by the ingredient number in numeric format.
+       </details>
     
-    * <details><summary><b> Ícones</b></summary>
+     * <details><summary><b> Icons</b></summary>
 
-      Os ícones a serem utilizados na aplicação estão disponíveis do diretório `src/image/`. Esses ícones serão utilizados pelos testes da avaliação automatizada, então certifique-se de utilizá-los nos requisitos e de não renomeá-los.
+       The icons to be used in the application are available in the `src/image/` directory. These icons will be used by the automated assessment tests, so make sure you use them in the requirements and do not rename them.
 
-      Os ícones são:
+       The icons are:
 
-      * `profileIcon.svg`;
-      * `searchIcon.svg`;
-      * `drinkIcon.svg`;
-      * `mealIcon.svg`;
-      * `shareIcon.svg`;
-      * `whiteHeartIcon.svg`;
-      * `blackHeartIcon.svg`;
-      </details>
+       * `profileIcon.svg`;
+       * `searchIcon.svg`;
+       * `drinkIcon.svg`;
+       * `mealIcon.svg`;
+       * `shareIcon.svg`;
+       * `whiteHeartIcon.svg`;
+       * `blackHeartIcon.svg`;
+       </details>
 
-    * <details><summary><b> Biblioteca <code>clipboard-copy</code></b></summary>
+     * <details><summary><b> Library <code>clipboard-copy</code></b></summary>
 
-      Para os componentes que contêm a funcionalidade de favoritar comidas ou bebidas, será necessário utilizar a biblioteca `clipboard-copy` para copiar as informações da receita. Essa biblioteca já vem instalada no projeto.
+       For components that contain the functionality to favorite food or drinks, you will need to use the `clipboard-copy` library to copy the recipe information. This library is already installed in the project.
 
-      Para mais informações, consulte a [documentação](https://www.npmjs.com/package/clipboard-copy)
-      </details>
+       For more information, see [documentation](https://www.npmjs.com/package/clipboard-copy)
+       </details>
 
-    * <details><summary><b> Biblioteca <code>Bootstrap</code> (opcional)</b></summary>
+     * <details><summary><b> <code>Bootstrap</code> library (optional)</b></summary>
 
-      Para os grupos que quiserem implementar estilizações no app, recomendamos o uso da lib `Bootstrap`. Ela já vem instalada por padrão neste projeto, bastando apenas implementar nos seus componentes. Por exemplo, caso queira implementar um [botão](https://react-bootstrap.github.io/components/buttons/):
+       For groups that want to implement styling in the app, we recommend using the `Bootstrap` lib. It is already installed by default in this project, you just need to implement it in its components. For example, if you want to implement a [button](https://react-bootstrap.github.io/components/buttons/):
 
-      ``` jsx
-      import Button from 'react-bootstrap/Button';
+       ``` jsx
+       import Button from 'react-bootstrap/Button';
 
-      const MeuComponente = () => (
-        <Button variant="success">
-          Botão Verde
-        </Button>
-      );
-      ...
-      ```
+       const MyComponent = () => (
+         <Button variant="success">
+           Green Button
+         </Button>
+       );
+       ...
+       ```
 
-      Para mais informações, consulte a [documentação](https://react-bootstrap.github.io/getting-started/introduction/)
-      </details>
-    </details><br />
+       For more information, see [documentation](https://react-bootstrap.github.io/getting-started/introduction/)
+       </details>
+     </details><br />
 </details>
 
 <details>
-  <summary><strong>🗣 Nos dê feedbacks sobre o projeto!</strong></summary><br />
+   <summary><strong>🗣 Give us feedback on the project!</strong></summary><br />
 
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. 
-**Leva menos de 3 minutos!**
+When finalizing and submitting the project, don't forget to rate your experience by filling out the form.
+**Takes less than 3 minutes!**
 
-[FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
+[PROJECT EVALUATION FORM](https://be-trybe.typeform.com/to/ZTeR4IbH)
 
 </details>
 
 <details>
-  <summary><strong>💻 Protótipo do projeto no Figma</strong></summary><br />
+   <summary><strong>💻 Project prototype in Figma</strong></summary><br />
 
-Além da qualidade do código e do atendimento aos requisitos, um bom layout é um dos aspectos responsáveis por melhorar a usabilidade de uma aplicação e turbinar seu portfólio!
+In addition to code quality and meeting requirements, a good layout is one of the aspects responsible for improving the usability of an application and boosting your portfolio!
 
-Você pode estar se perguntando: *"Como deixo meu projeto com um layout mais atrativo?"* 🤔
+You may be asking yourself: *"How do I make my project with a more attractive layout?"* 🤔
 
-Para isso, disponibilizamos esse [protótipo do Figma](https://www.figma.com/file/9WXNFMewKRBC5ZawU1EXYG/%5BProjeto%5D%5BFrontend%5D-Recipes-App?node-id=0%3A1) para lhe ajudar !
+To do this, we provide this [Figma prototype](https://www.figma.com/file/9WXNFMewKRBC5ZawU1EXYG/%5BProjeto%5D%5BFrontend%5D-Recipes-App?node-id=0%3A1) to help you!
 
-⚠️ A estilização de sua aplicação não será avaliada nesse projeto, portanto esse protótipo é apenas uma **sugestão** e seu uso é **opcional**. Sinta-se à vontade para modificar o layout e deixá-lo do seu jeito.
+⚠️ The styling of your application will not be evaluated in this project, so this prototype is just a **suggestion** and its use is **optional**. Feel free to modify the layout and make it your own.
 
-**⚠️ Para visualizar os comentários sobre cada componente, basta clicar no ícone de comentários no Figma (lado esquerdo superior).**
+**⚠️ To view comments about each component, simply click the comments icon in Figma (top left).**
 
 ![image](https://res.cloudinary.com/drdpedroso/image/upload/c_scale,w_400/v1575815877/Screenshot_2019-12-08_at_11.37.25_kzt7rl.png)
 
 </details>
 
 <details>
-  <summary><strong>🗂 Compartilhe seu portfólio!</strong></summary><br />
+   <summary><strong>🗂 Share your portfolio!</strong></summary><br />
 
-Agora que você finalizou os requisitos, chegou a hora de mostrar ao mundo que você aprendeu algo novo! 🚀
+Now that you've finalized the requirements, it's time to show the world that you've learned something new! 🚀
 
-  Siga esse [**guia que preparamos com carinho**](https://app.betrybe.com/course/career/personal_portfolio/utilizando-projetos-feitos-na-trybe/d7ca7f50-0a8f-4b10-b360-cfcb454d832a) para disponibilizar o projeto finalizado no seu GitHub pessoal.
+   Follow this [**guide that we prepared with care**](https://app.betrybe.com/course/career/personal_portfolio/utilizando-projetos-feitos-na-trybe/d7ca7f50-0a8f-4b10-b360-cfcb454d832a) to make the finished project available on your personal GitHub.
 
-Além de manter um back-up do seu trabalho, esse passo é super importante para ganhar mais visibilidade no mercado de trabalho.
+In addition to keeping a back-up of your work, this step is super important to gain more visibility in the job market.
 
-  E você sabia que o LinkedIn é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe esse projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
+   And did you know that LinkedIn is the main professional social network and sharing your learning there is very important for anyone who wants to build a successful career? Share this project on your LinkedIn, tag Trybe's profile (@trybe) and show your network its evolution.
 
 </details><br />
 
-# Requisitos
+# Requirements
 
-:warning: **PULL REQUESTS COM ERROS DE LINTER NÃO SERÃO AVALIADAS.** :warning:
+:warning: **PULL REQUESTS WITH LINTER ERRORS WILL NOT BE EVALUATED.** :warning:
 
-Nesse projeto, a pessoa que estiver utilizando o app pode procurar uma receita específica, explorar receitas baseado em diferentes critérios, favoritar e fazer as receitas, entre outras funcionalidades.
+In this project, the person using the app can search for a specific recipe, explore recipes based on different criteria, favorite and make recipes, among other features.
 
-As telas sofrem variações dependendo do tipo da receita (se é comida ou bebida, no caso).
+The screens vary depending on the type of recipe (whether it is food or drink, in this case).
 
-***Obs: A maneira como as APIs devem ser estruturadas segue os seguintes modelos: https://www.themealdb.com/api.php e https://www.thecocktaildb.com/api.php***
+***Note: The way APIs must be structured follows the following models: https://www.themealdb.com/api.php and https://www.thecocktaildb.com/api.php***
 
-## Testes unitários
+## Unitary tests
 
-### 1 - Desenvolva os testes unitários de maneira que a cobertura seja de, no mínimo, 90%
+### 1 - Develop unit tests so that coverage is at least 90%
 <br />
 <details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Neste requisito vamos cobrir a nossa aplicação com testes unitários/integração utilizando a biblioteca [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), aproveite essa oportunidade para colocar em prática o [Desenvolvimento Orientado por Testes](https://blog.betrybe.com/tecnologia/tdd-test-driven-development/)
+   * In this requirement we will cover our application with unit/integration tests using the [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), take advantage of this opportunity to put it into practice [Test Driven Development](https://blog.betrybe.com/technology/tdd-test-driven-development/)
 
-  * Lembre-se de que no Desenvolvimento Orientado por Testes, você deve escrever os testes junto com o desenvolvimento de novas funcionalidades. Por esse motivo, este requisito só passará no avaliador enquanto sua aplicação estiver com a cobertura de testes desejada. Caso você adicione uma nova funcionalidade e não crie os testes para ela, este requisito pode parar de passar no avaliador.
+   * Remember that in Test-Driven Development, you must write the tests along with developing new features. For this reason, this requirement will only pass the evaluator as long as your application has the desired test coverage. If you add a new feature and don't create tests for it, this requirement may stop passing the evaluator.
 
-  * Os testes criados por você não irão influenciar os outros requisitos no avaliador. Você deverá desenvolver seus testes unitários/integração usando a biblioteca React Testing Library, enquanto o avaliador usará a biblioteca [Cypress](https://docs.cypress.io/) para avaliar os requisitos, inclusive os de cobertura.
+   * The tests created by you will not influence the other requirements in the evaluator. You must develop your unit/integration tests using the React Testing Library, while the evaluator will use the [Cypress](https://docs.cypress.io/) library to evaluate the requirements, including coverage.
 
 </details>
 <br />
 <details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Verifica a cobertura de testes unitários
+   - Checks unit test coverage
 </details><br />
 
 ---
 
-## Tela de login
+## Login screen
 
-> ⚠️ Observações:
+> ⚠️ Observations:
 >
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `Login.js`.
-> - 🔗 A rota usada para essa tela deve ser `/`.
+> - 📁 For the tests to pass, the component must be called `Login.js`.
+> - 🔗 The route used for this screen must be `/`.
 
-### 2 - Crie todos os elementos que devem respeitar os atributos descritos no protótipo para a tela de login
+### 2 - Create all elements that must respect the attributes described in the prototype for the login screen
 
 <details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * O input de email deve possuir o atributo `data-testid="email-input"`;
-  * O input de senha deve possuir o atributo `data-testid="password-input"`;
-  * O botão "Enter" deve possuir o atributo `data-testid="login-submit-btn"`.
+   * The email input must have the attribute `data-testid="email-input"`;
+   * The password input must have the attribute `data-testid="password-input"`;
+   * The "Enter" button must have the `data-testid="login-submit-btn"` attribute.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se estão corretos os data-testids email-input, password-input e login-submit-btn.
+   - If the data-testids email-input, password-input and login-submit-btn are correct.
 </details><br />
 
 ---
 
-### 3 - Desenvolva a tela de maneira que a pessoa consiga escrever seu email no input de email e sua senha no input de senha
+### 3 - Develop the screen so that the person can write their email in the email input and their password in the password input
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - A possibilidade de escrever o email no input do email.
-  - A possibilidade de escrever a senha no input de senha.
+   - The possibility of writing the email in the email input.
+   - The possibility of writing the password in the password input.
 </details><br />
 
 ---
 
-### 4 - Desenvolva a tela de maneira que o formulário só seja válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos
+### 4 - Design the screen so that the form is only valid after a valid email and a password of more than 6 characters are filled in
 
-> Este requisito também inclui testes de cobertura da página `Login.js`.
+> This requirement also includes coverage testing of the `Login.js` page.
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * O formulário só fica válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos;
-  * Caso o formulário esteja inválido, o botão de submeter deve estar desativado, contendo a propriedade `disabled`;
-  * Caso o formulário esteja válido, o botão de submeter deve estar ativado, não contendo a propriedade `disabled`.
+   * The form is only valid after a valid email and a password of more than 6 characters are filled in;
+   * If the form is invalid, the submit button must be disabled, containing the `disabled` property;
+   * If the form is valid, the submit button must be activated, not containing the `disabled` property.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - O botão deve estar desativado se o email for inválido
-  - O botão deve estar desativado se a senha deve 6 caracteres ou menos
-  - O botão deve estar ativado se o email e a senha forem válidos
-  - Verifica a cobertura de 45% da tela de Login
+   - The button must be disabled if the email is invalid
+   - The button must be disabled if the password must be 6 characters or less
+   - The button must be activated if the email and password are valid
+   - Checks 45% coverage of the Login screen
 </details><br />
 
 ---
 
-### 5 - Após a submissão do formulário, salve no localStorage o e-mail da pessoa usuária na chave `user`
+### 5 - After submitting the form, save the user's email in the `user` key in localStorage
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Após a submissão, o e-mail de pessoa usuária deve ser salvo em `localStorage` na chave `user` no formato `{ email: email-da-pessoa }`.
+   * After submission, the user's email must be saved in `localStorage` under the `user` key in the format `{ email: email-of-the-person }`.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se após a submissão, a chave user está salva em localStorage.
+   - If after submission, the user key is saved in localStorage.
 </details>
 
 ---
 
-### 6 - Redirecione a pessoa usuária para a tela principal de receitas de comidas após a submissão e validação com sucesso do login
+### 6 - Redirect the user to the main food recipe screen after successful login submission and validation
 
-> Este requisito também inclui testes de cobertura da página `Login.js`.
+> This requirement also includes coverage testing of the `Login.js` page.
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se a rota muda para a tela principal de receitas de comidas.
-  - Verifica a cobertura de 90% da tela de Login.
+   - If the route switches to the main food recipes screen.
+   - Checks 90% coverage of the Login screen.
 </details>
 
 ---
 
 ## Header
 
-> ⚠️ Observação:
+> ⚠️ Note:
 >
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `Header.js`.
+> - 📁 For the tests to pass, the component must be called `Header.js`.
 
-### 7 - Implemente o header de acordo com a necessidade de cada tela
+### 7 - Implement the header according to the needs of each screen
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * O Header deve ter os seguintes elementos: 
-    * Ícone de perfil com o data-testid `profile-top-btn`, que deverá estar sempre presente;
-    * Ícone de pesquisa com o data-testid `search-top-btn`, que deverá estar presente somente em alguma páginas (conforme a lista abaixo);
-    * Título da página com o data-testid `page-title`, que deverá estar sempre presente.
-  * Os ícones podem ser encontrados em `src/images/profileIcon.svg` e em `src/images/searchIcon.svg`.
-  * Cada página deverá ter seu próprio título, que será renderizado pelo Header.
-  * Todas as rotas serão verificadas, portanto, crie as rotas que ainda não foram criadas.
+   * The Header must have the following elements:
+     * Profile icon with data-testid `profile-top-btn`, which must always be present;
+     * Search icon with data-testid `search-top-btn`, which should only be present on some pages (according to the list below);
+     * Title of the page with the data-testid `page-title`, which must always be present.
+   * Icons can be found in `src/images/profileIcon.svg` and `src/images/searchIcon.svg`.
+   * Each page must have its own title, which will be rendered by Header.
+   * All routes will be checked, so create routes that have not yet been created.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Rota "/": **não** possui header
-  - Rota "/meals": possui o header com o título "Meals" e os ícones de perfil e pesquisa
-  - Rota "/drinks": possui o header com o título "Drinks" e os ícones de perfil e pesquisa
-  - Rota "/meals/:id-da-receita": **não** possui header
-  - Rota "/drinks/:id-da-receita": **não** possui header
-  - Rota "/meals/:id-da-receita/in-progress": **não** possui header
-  - Rota "/drinks/:id-da-receita/in-progress": **não** possui header
-  - Rota "/profile": possui o header com o título "Profile" e o ícone de perfil, mas **sem** o ícone de pesquisa
-  - Rota "/done-recipes": possui o header com o título "Done Recipes" e o ícone de perfil, mas **sem** o ícone de pesquisa
-  - Rota "/favorite-recipes": possui o header com o título "Favorite Recipes" e o ícone de perfil, mas **sem** o ícone de pesquisa
-</details>
-
----
-
-### 8 - Redirecione a pessoa usuária para a tela de perfil ao clicar no botão de perfil
-
-> Este requisito também inclui testes de cobertura do componente `Header.js`.
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Após clicar no botão de perfil com o testid `profile-top-btn`, verifica se:
-    - A rota muda para a tela de perfil `/profile`
-    - O título do header muda para "Profile"
-  - Verifica a cobertura de 45% do componente Header.
+   - Route "/": **does not** have a header
+   - "/meals" route: has the header with the title "Meals" and the profile and search icons
+   - "/drinks" route: has the header with the title "Drinks" and the profile and search icons
+   - Route "/meals/:recipe-id": **doesn't have a header
+   - Route "/drinks/:recipe-id": **doesn't have a header
+   - Route "/meals/:id-da-receita/in-progress": **does not** have a header
+   - Route "/drinks/:id-da-receita/in-progress": **doesn't have a header
+   - "/profile" route: has the header with the title "Profile" and the profile icon, but **without** the search icon
+   - "/done-recipes" route: has the header with the title "Done Recipes" and the profile icon, but **without** the search icon
+   - "/favorite-recipes" route: has the header with the title "Favorite Recipes" and the profile icon, but **without** the search icon
 </details>
 
 ---
 
-### 9 - Desenvolva o botão de busca que, ao ser clicado, a barra de busca deve aparecer. O mesmo serve para escondê-la
+### 8 - Redirect the user to the profile screen when clicking the profile button
 
-> Este requisito também inclui testes de cobertura do componente `Header.js`.
+> This requirement also includes coverage testing of the `Header.js` component.
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
+
+   - After clicking on the profile button with the testid `profile-top-btn`, check if:
+     - The route changes to the profile screen `/profile`
+     - The header title changes to "Profile"
+   - Checks 45% coverage of the Header component.
+</details>
+
+---
+
+### 9 - Develop the search button that, when clicked, the search bar should appear. The same goes for hiding it
+
+> This requirement also includes coverage testing of the `Header.js` component.
+
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
   
-  * Nesse requisito você deverá apenas implementar a lógica para esconder e mostrar o input de busca. A funcionalidade, dentre outros detalhes da barra de busca só serão implementados no requisito 10!
-  * O input de busca que será exibido deve possuir o atributo `data-testid="search-input"`
+   * In this requirement you must only implement the logic to hide and show the search input. The functionality, among other details of the search bar, will only be implemented in requirement 10!
+   * The search input that will be displayed must have the attribute `data-testid="search-input"`
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
   
-  - Se ao clicar no botão de busca pela primeira vez, a barra de busca aparece.
-  - Se ao clicar no botão de busca pela segunda vez, a barra de busca desaparece;
-  - Verifica a cobertura de 90% do componente Header
+   - If you click the search button for the first time, the search bar appears.
+   - If when you click the search button a second time, the search bar disappears;
+   - Checks 90% coverage of the Header component
 </details>
 
 ---
 
-## Barra de busca - Header
+## Search bar - Header
 
-> ⚠️ Observação:
+> ⚠️ Note:
 >
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `SearchBar.js`.
+> - 📁 For the tests to pass, the component must be called `SearchBar.js`.
 
-### 10 - Implemente os elementos da barra de busca respeitando os atributos descritos no protótipo
+### 10 - Implement the search bar elements respecting the attributes described in the prototype
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Deve existir os data-testids tanto na barra de busca quanto em todos os radio-buttons.
-  * O radio button de busca de ingrediente deve possuir o atributo `data-testid="ingredient-search-radio"`;
-  * O radio button de busca por nome deve possuir o atributo `data-testid="name-search-radio"`;
-  * O radio button de busca da primeira letra deve possuir o atributo `data-testid="first-letter-search-radio"`.
-  * O botão de busca deve possuir o atributo `data-testid="exec-search-btn"`
+   * Data-testids must exist both in the search bar and on all radio buttons.
+   * The ingredient search radio button must have the attribute `data-testid="ingredient-search-radio"`;
+   * The name search radio button must have the attribute `data-testid="name-search-radio"`;
+   * The first letter search radio button must have the attribute `data-testid="first-letter-search-radio"`.
+   * The search button must have the attribute `data-testid="exec-search-btn"`
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se os data-testids estão corretos tanto na barra de busca quanto em todos os radio-buttons.
-</details>
-
----
-
-### 11 - Implemente 3 radio buttons na barra de busca: Ingredient, Name e First letter
-
-<br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
-
-  * A barra de busca deve possuir 3 _radio buttons_: `Ingredient`, `Name` e `First letter`. Eles, em conjunto com a `search-input`, devem mudar a forma como serão filtradas as receitas após clicar no botão `Search`.  Os _endpoints_ da API que você deve usar podem ser consultados [aqui para a API de comidas](https://www.themealdb.com/api.php) e [aqui para a API de bebidas](https://www.thecocktaildb.com/api.php).
-  * Se o radio selecionado for `Ingredient`, a busca na API é feita corretamente pelo ingrediente. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/filter.php?i={ingrediente}`;
-  * Se o radio selecionado for `Name`, a busca na API é feita corretamente pelo nome. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?s={nome}`;
-  * Se o radio selecionado for `First letter`, a busca na API é feita corretamente pela primeira letra. O endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?f={primeira-letra}`;
-      * Se o radio selecionado for `First letter` e a busca na API for feita com mais de uma letra, deve-se exibir um `alert` com a mensagem "Your search must have only 1 (one) character".
-  * :bulb: **Exemplo: Ao selecionar `Ingredient` e buscar por `chicken`, deve-se utilizar o endpoint `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken`.**
-
-  :bulb: **Atenção:** Utilize `global.alert` para evitar os `warnings` do eslint sobre o uso de `alert` no código.<br />
-  :bulb: Observação: Para esse requisito será verificada apenas a tela principal de receitas de comidas.
-</details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se o radio selecionado for Ingredient, a busca na API é feita corretamente pelo ingrediente
-  - Se o radio selecionado for Name, a busca na API é feita corretamente pelo nome
-  - Se o radio selecionado for First letter, a busca na API é feita corretamente pela primeira letra
-  - Se o radio selecionado for First letter e a busca na API for feita com mais de uma letra, deve-se exibir um alert
+   - If the data-testids are correct in both the search bar and all radio buttons.
 </details>
 
 ---
 
-### 12 - Busque na API de comidas caso a pessoa esteja na página de comidas, e na API de bebidas caso esteja na de bebidas
-
-> Este requisito também inclui testes de cobertura do componente `SearchBar.js`.
+### 11 - Implement 3 radio buttons in the search bar: Ingredient, Name and First letter
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Na tela de bebidas, se o radio selecionado for `Ingredient`, a busca na API é feita corretamente pelo ingrediente. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i={ingrediente}`;
-  * Na tela de bebidas, se o radio selecionado for `Name`, a busca na API é feita corretamente pelo nome. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?s={nome}`;
-  * Na tela de bebidas, se o radio selecionado for `First letter`, a busca na API é feita corretamente pela primeira letra. O endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?f={primeira-letra}`;
-      * Na tela de bebidas, se o radio selecionado for `First letter` e a busca na API for feita com mais de uma letra, deve-se exibir um `alert` com a mensagem "Your search must have only 1 (one) character".
+   * The search bar must have 3 _radio buttons_: `Ingredient`, `Name` and `First letter`. They, together with `search-input`, should change the way recipes will be filtered after clicking the `Search` button. The API _endpoints_ you should use can be found [here for the food API](https://www.themealdb.com/api.php) and [here for the drinks API](https://www. thecocktaildb.com/api.php).
+   * If the selected radio is `Ingredient`, the API search is done correctly by the ingredient. The endpoint used must be `https://www.themealdb.com/api/json/v1/1/filter.php?i={ingrediente}`;
+   * If the selected radio is `Name`, the API search is done correctly by name. The endpoint used must be `https://www.themealdb.com/api/json/v1/1/search.php?s={name}`;
+   * If the selected radio is `First letter`, the API search is done correctly by the first letter. The endpoint used must be `https://www.themealdb.com/api/json/v1/1/search.php?f={primeira-letra}`;
+       * If the selected radio is `First letter` and the API search is performed with more than one letter, an `alert` must be displayed with the message "Your search must have only 1 (one) character".
+   * :bulb: **Example: When selecting `Ingredient` and searching for `chicken`, you must use the endpoint `https://www.themealdb.com/api/json/v1/1/filter.php?i =chicken`.**
 
-  :bulb: **Atenção:** Utilize `global.alert` para evitar os `warnings` do eslint sobre o uso de `alert` no código.<br />
-  :bulb: Observação: Para esse requisito será verificada apenas a tela principal de receitas de bebidas, pois a de comidas já foi verificada no requisito anterior.
+   :bulb: **Warning:** Use `global.alert` to avoid eslint's `warnings` about the use of `alert` in the code.<br />
+   :bulb: Note: For this requirement, only the main food recipe screen will be checked.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Na tela de bebidas, se o radio selecionado for Ingredient, a busca na API é feita corretamente pelo ingrediente
-  - Na tela de bebidas, se o radio selecionado for Name, a busca na API é feita corretamente pelo nome
-  - Na tela de bebidas, se o radio selecionado for First letter, a busca na API é feita corretamente pela primeira letra
-  - Na tela de bebidas, se o radio selecionado for First letter e a busca na API for feita com mais de uma letra, deve-se exibir um alert
-  - Verifica a cobertura de 45% do componente SearchBar
-</details>
-
----
-
-### 13 - Redirecione para a tela de detalhes da receita caso apenas uma receita seja encontrada, com o ID da mesma na URL
-
-<br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
-
-  * Caso apenas uma comida seja encontrada, deve-se ir para sua rota de detalhes (`/meals/:id-da-receita`);
-  * Caso apenas uma bebida seja encontrada, deve-se ir para sua rota de detalhes (`/drinks/:id-da-receita`).
-</details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se caso apenas uma comida seja encontrada, deve-se ir para sua rota de detalhes.
-  - Se caso apenas uma bebida seja encontrada, deve-se ir para sua rota de detalhes.
+   - If the selected radio is Ingredient, the API search is done correctly by the ingredient
+   - If the selected radio is Name, the API search is done correctly by name
+   - If the radio selected is First letter, the API search is done correctly by the first letter
+   - If the radio selected is First letter and the API search is performed with more than one letter, an alert must be displayed
 </details>
 
 ---
 
-### 14 - Caso a busca retorne mais de uma receita, renderize as 12 primeiras encontradas, exibindo a imagem e o nome de cada uma
+### 12 - Search the food API if the person is on the food page, and the drinks API if they are on the drinks page
+
+> This requirement also includes coverage tests for the `SearchBar.js` component.
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Exiba as 12 primeiras receitas que forem retornadas pela busca.
-  * Caso a busca retorne menos do que 12 receitas, exiba todas elas.
-  * Cada receita deve ser exibida em um elemento que contenha as suas informações.
-  * Exiba a imagem e o nome de cada receita.
-  * O elemento que contém cada receita deve ter o `data-testid="${index}-recipe-card"`.
-  * A imagem de cada receita deve conter o `data-testid="${index}-card-img"`.
-  * A tag com o nome de cada receita deve ter o `data-testid="${index}-card-name"`.
+   * On the drinks screen, if the radio selected is `Ingredient`, the API search is performed correctly by the ingredient. The endpoint used must be `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i={ingrediente}`;
+   * On the drinks screen, if the radio selected is `Name`, the API search is done correctly by name. The endpoint used must be `https://www.thecocktaildb.com/api/json/v1/1/search.php?s={name}`;
+   * On the drinks screen, if the radio selected is `First letter`, the API search is performed correctly by the first letter. The endpoint used must be `https://www.thecocktaildb.com/api/json/v1/1/search.php?f={primeira-letra}`;
+       * On the drinks screen, if the radio selected is `First letter` and the API search is performed with more than one letter, an `alert` must be displayed with the message "Your search must have only 1 (one) character ".
+
+   :bulb: **Warning:** Use `global.alert` to avoid eslint's `warnings` about the use of `alert` in the code.<br />
+   :bulb: Note: For this requirement, only the main screen for drink recipes will be checked, as the food recipe screen has already been checked in the previous requirement.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se caso mais de uma comida seja encontrada, mostrar as 12 primeiras.
-  - Se caso mais de uma bebida seja encontrada, mostrar as 12 primeiras.
-</details>
-
----
-
-### 15 - Exiba um `alert` caso nenhuma receita seja encontrada
-
-> Este requisito também inclui testes de cobertura do componente `SearchBar.js`.
-
-<br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
-
-  * O alert deve conter o texto "Sorry, we haven't found any recipes for these filters."
-
-  :bulb: **Atenção:** Utilize `global.alert` para evitar os `warnings` do eslint sobre o uso de `alert` no código.<br />
-</details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se caso nenhuma comida seja encontrada o alert deve ser exibido.
-  - Se caso nenhuma bebida seja encontrada o alert deve ser exibido.
-  - Verifica a cobertura de 90% do componente SearchBar.
+   - On the drinks screen, if the radio selected is Ingredient, the API search is performed correctly by the ingredient
+   - On the drinks screen, if the radio selected is Name, the API search is done correctly by name
+   - On the drinks screen, if the radio selected is First letter, the API search is performed correctly by the first letter
+   - On the drinks screen, if the radio selected is First letter and the API search is performed with more than one letter, an alert must be displayed
+   - Checks 45% coverage of the SearchBar component
 </details>
 
 ---
 
-## Menu inferior
+### 13 - Redirect to the recipe details screen if only one recipe is found, with its ID in the URL
 
-> ⚠️ Observação:
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
+
+   * If only one food is found, you must go to its details route (`/meals/:recipe-id`);
+   * If only one drink is found, you must go to its details route (`/drinks/:recipe-id`).
+</details>
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - If only one food is found, you must go to its details route.
+   - If only one drink is found, go to its details route.
+</details>
+
+---
+
+### 14 - If the search returns more than one recipe, render the first 12 found, displaying the image and name of each one
+
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
+
+   * Display the first 12 recipes returned by the search.
+   * If the search returns fewer than 12 recipes, display all of them.
+   * Each recipe must be displayed in an element that contains its information.
+   * Display the image and name of each recipe.
+   * The element containing each recipe must have `data-testid="${index}-recipe-card"`.
+   * The image of each recipe must contain `data-testid="${index}-card-img"`.
+   * The tag with the name of each recipe must have `data-testid="${index}-card-name"`.
+</details>
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - If more than one food is found, show the first 12.
+   - If more than one drink is found, show the first 12.
+</details>
+
+---
+
+### 15 - Display an `alert` if no recipe is found
+
+> This requirement also includes coverage tests for the `SearchBar.js` component.
+
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
+
+   * The alert must contain the text "Sorry, we haven't found any recipes for these filters."
+
+   :bulb: **Warning:** Use `global.alert` to avoid eslint's `warnings` about the use of `alert` in the code.<br />
+</details>
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - If no food is found, the alert should be displayed.
+   - If no drink is found, the alert should be displayed.
+   - Checks 90% coverage of the SearchBar component.
+</details>
+
+---
+
+## Bottom menu
+
+> ⚠️ Note:
 >
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `Footer.js`.
+> - 📁 For the tests to pass, the component must be called `Footer.js`.
 
-### 16 - Implemente o menu inferior posicionando-o de forma fixa e contendo 2 ícones: um para comidas e outro para bebidas
+### 16 - Implement the bottom menu by positioning it in a fixed way and containing 2 icons: one for food and one for drinks
 
-> Este requisito também inclui testes de cobertura do componente `Footer.js`.
+> This requirement also includes coverage testing of the `Footer.js` component.
   
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Todos os ícones necessários estão disponíveis na pasta `src/images`;
-  * O menu inferior deve ter possuir o atributo `data-testid="footer"`;
-  * O elemento que leva para a página de bebidas deve usar o ícone `drinkIcon.svg` e possuir o atributo `data-testid="drinks-bottom-btn"`;
-  * O elemento que leva para a página de comidas deve usar o ícone `mealIcon.svg` e possuir o atributo `data-testid="meals-bottom-btn"`;
-  * O menu inferior deve ficar fixado sempre ao final da página.
+   * All necessary icons are available in the `src/images` folder;
+   * The bottom menu must have the `data-testid="footer"` attribute;
+   * The element that leads to the drinks page must use the icon `drinkIcon.svg` and have the attribute `data-testid="drinks-bottom-btn"`;
+   * The element that leads to the food page must use the icon `mealIcon.svg` and have the attribute `data-testid="meals-bottom-btn"`;
+   * The bottom menu must always be fixed at the end of the page.
 </details>
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se o menu inferior existe e contém os ícones corretos
-  - Se o menu inferior está fixado sempre ao final da página.
-  - Verifica a cobertura de 45% do componente Footer.
+   - Whether the bottom menu exists and contains the correct icons
+   - If the bottom menu is always fixed to the end of the page.
+   - Checks 45% coverage of the Footer component.
 </details>
 
 ---
 
-### 17 - Exiba o menu inferior apenas nas telas indicadas pelo protótipo
+### 17 - Display the bottom menu only on the screens indicated by the prototype
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-* Todas as rotas serão verificadas, portanto, crie as rotas que ainda não foram criadas.
+* All routes will be checked, so create routes that have not yet been created.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Rota "/": **não** deve ter footer
-  - Rota "/meals": deve ter footer
-  - Rota "/drinks": deve ter footer
-  - Rota "/meals/:id-da-receita": **não** deve ter footer
-  - Rota "/drinks/:id-da-receita": **não** deve ter footer
-  - Rota "/meals/:id-da-receita/in-progress": **não** deve ter footer
-  - Rota "/drinks/:id-da-receita/in-progress": **não** deve ter footer
-  - Rota "/profile": deve ter footer
-  - Rota "/done-recipes": **não** deve ter footer
-  - Rota "/favorite-recipes": **não** deve ter footer
+   - Route "/": **not** must have a footer
+   - Route "/meals": must have footer
+   - Route "/drinks": must have a footer
+   - Route "/meals/:recipe-id": **not** must have a footer
+   - Route "/drinks/:recipe-id": **not** must have a footer
+   - Route "/meals/:id-da-receita/in-progress": **not** must have a footer
+   - Route "/drinks/:id-da-receita/in-progress": **not** must have a footer
+   - Route "/profile": must have footer
+   - Route "/done-recipes": **not** should have a footer
+   - Route "/favorite-recipes": **not** must have a footer
+</details>
+
+---
+### 18 - Redirect the user to the correct screen by clicking on each icon in the bottom menu
+
+> This requirement also includes coverage testing of the `Footer.js` component.
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+- If there is redirection to the drinks list when clicking on the drinks icon;
+- If there is redirection to the list of foods when clicking on the food icon;
+- Checks 90% coverage of the Footer component.
 </details>
 
 ---
 
-### 18 - Redirecione a pessoa usuária para a tela correta ao clicar em cada ícone no menu inferior
+## Main recipe screen
 
-> Este requisito também inclui testes de cobertura do componente `Footer.js`.
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-- Se há o redirecionamento para a lista de bebidas ao clicar no ícone de bebidas;
-- Se há o redirecionamento para a lista de comidas ao clicar no ícone de comidas;
-- Verifica a cobertura de 90% do componente Footer.
-</details>
-
----
-
-## Tela principal de receitas
-
-> ⚠️ Observações:
+> ⚠️ Observations:
 >
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `Recipes.js`.
-> - 🔗 As rotas usadas para essa tela devem ser `/meals` e `/drinks`.
+> - 📁 For the tests to pass, the component must be called `Recipes.js`.
+> - 🔗 The routes used for this screen must be `/meals` and `/drinks`.
 
-:bulb: **Dica:** lembre-se de componentizar muito bem os elementos em React nessa tela evitando assim problemas de lógica e de complexidade ;).
+:bulb: **Tip:** remember to componentize the React elements very well on this screen, thus avoiding logic and complexity problems ;).
 
-### 19 - Carregue as 12 primeiras receitas de comidas ou bebidas, uma em cada card
+### 19 - Upload the first 12 food or drink recipes, one on each card
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * As receitas devem ser carregadas ao inicializar a página.
-  * Caso as receitas sejam de comidas, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.themealdb.com/api/json/v1/1/search.php?s=`
-  * Caso as receitas sejam de bebidas, deve-se carregar as 12 primeiras receitas obtidas através do endpoint `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`
-  * O card deve ter o `data-testid="${index}-recipe-card"`
-  * A foto (`strMealThumb` ou `strDrinkThumb`) deve ter o `data-testid="${index}-card-img"`
-  * O nome (`strMeal` ou `strDrink`) deve ter o `data-testid="${index}-card-name"`
+   * Recipes must be loaded when starting the page.
+   * If the recipes are for food, you must load the first 12 recipes obtained through the endpoint `https://www.themealdb.com/api/json/v1/1/search.php?s=`
+   * If the recipes are for drinks, you must load the first 12 recipes obtained through the endpoint `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`
+   * The card must have `data-testid="${index}-recipe-card"`
+   * The photo (`strMealThumb` or `strDrinkThumb`) must have `data-testid="${index}-card-img"`
+   * The name (`strMeal` or `strDrink`) must have `data-testid="${index}-card-name"`
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-- A tela tem os data-testids de todos os 12 cards da tela de comidas
-- Caso as receitas sejam de comida, deve-se carregar as 12 primeiras receitas
-- A tela tem os data-testids de todos os 12 cards da tela de bebidas
-- Caso as receitas sejam de bebida, deve-se carregar as 12 primeiras receitas
+- The screen has the data-testids of all 12 cards on the food screen
+- If the recipes are for food, you must upload the first 12 recipes
+- The screen has the data-testids of all 12 cards on the drinks screen
+- If the recipes are for drinks, you must upload the first 12 recipes
 </details>
 
 ---
 
 
 
-### 20 - Implemente os botões de categoria para serem utilizados como filtro
+### 20 - Implement category buttons to be used as a filter
 
-> Este requisito também inclui testes de cobertura da página `Recipes.js`.
+> This requirement also includes coverage testing of the `Recipes.js` page.
 
 <details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Cada botão deve conter o atributo prefixado `data-testid=${categoryName}-category-filter` e devem ser exibidas apenas as 5 primeiras categorias retornadas da API.
-  * Caso as receitas sejam de comida, deve-se exibir as 5 primeiras categorias de comida obtidas por meio do endpoint `https://www.themealdb.com/api/json/v1/1/list.php?c=list`;
-  * Caso as receitas sejam de bebida, deve-se exibir as 5 primeiras categorias de bebida obtidas por meio do endpoint `https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list`.
+   * Each button must contain the prefixed attribute `data-testid=${categoryName}-category-filter` and only the first 5 categories returned from the API must be displayed.
+   * If the recipes are for food, the first 5 food categories obtained through the endpoint `https://www.themealdb.com/api/json/v1/1/list.php?c=list` must be displayed ;
+   * If the recipes are drinks, the first 5 drink categories obtained through the endpoint `https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list` must be displayed .
 </details>
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-- Caso as receitas sejam de comida, deve-se exibir as 5 primeiras categorias de comida
-- Caso as receitas sejam de bebida, deve-se exibir as 5 primeiras categorias de bebida
-- Verifica a cobertura de 45% da tela de Receitas
+- If the recipes are for food, the first 5 food categories must be displayed
+- If the recipes are drinks, the first 5 drink categories must be displayed
+- Checks 45% coverage of the Recipes screen
 </details>
 
 ---
 
-### 21 - Implemente o filtro das receitas por meio da API ao clicar no filtro de categoria
+### 21 - Implement the recipe filter through the API when clicking on the category filter
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * As receitas, filtradas por categorias, devem ser obtidas por meio da API de [comidas](https://www.themealdb.com/api.php) ou [bebidas](https://www.thecocktaildb.com/api.php). Deve-se utilizar para as duas API's os endpoints de `Filter by Category`.
-  * Na tela de comidas se a categoria selecionada for `Beef` o endpoint utilizado será `https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef`
-  * Na tela de bebidas se a categoria selecionada for `Cocktail` o endpoint utilizado será `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail`
-  * Além das categorias providas pela API, vamos adicionar também um botão que deve limpar os filtros, retornando novamente todas as receitas. Esse botão deve ter o texto **"All"** e o atributo `data-testid="All-category-filter"`.
-  * Caso a categoria retorne apenas um resultado, **NÃO** deve ser feito o redirecionamento para a página de detalhes.
+   * Recipes, filtered by categories, must be obtained through the [foods](https://www.themealdb.com/api.php) or [drinks](https://www.thecocktaildb.com/api) API .php). The `Filter by Category` endpoints must be used for both APIs.
+   * On the food screen, if the selected category is `Beef`, the endpoint used will be `https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef`
+   * On the drinks screen, if the selected category is `Cocktail` the endpoint used will be `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail`
+   * In addition to the categories provided by the API, we will also add a button that should clear the filters, returning all recipes again. This button must have the text **"All"** and the attribute `data-testid="All-category-filter"`.
+   * If the category returns only one result, **NOT** redirection to the details page should be done.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Caso as receitas sejam de comida e a categoria seja "Beef", deve-se carregar as 12 primeiras receitas da categoria "Beef"
-  - Caso as receitas sejam de comida e a categoria seja "Breakfast", deve-se carregar as 12 primeiras receitas da categoria "Breakfast"
-  - Caso as receitas sejam de comida e a categoria seja "Chicken", deve-se carregar as 12 primeiras receitas da categoria "Chicken"
-  - Caso as receitas sejam de comida e a categoria seja "Dessert", deve-se carregar as 12 primeiras receitas da categoria "Dessert"
-  - Caso as receitas sejam de comida e a categoria seja "Goat", deve-se carregar as 12 primeiras receitas da categoria "Goat"
-  - Caso as receitas sejam de bebida e a categoria seja "Ordinary Drink", deve-se carregar as 12 primeiras receitas da categoria "Ordinary Drink"
-  - Caso as receitas sejam de bebida e a categoria seja "Cocktail", deve-se carregar as 12 primeiras receitas da categoria "Cocktail"
-  - Caso as receitas sejam de bebida e a categoria seja "Shake", deve-se carregar as 12 primeiras receitas da categoria "Shake"
-  - Caso as receitas sejam de bebida e a categoria seja "Other/Unknown", deve-se carregar as 12 primeiras receitas da categoria "Other/Unknown"
-  - Caso as receitas sejam de bebida e a categoria seja "Cocoa", deve-se carregar as 12 primeiras receitas da categoria "Cocoa"
-  - Caso as receitas sejam de comida deve existir a opção chamada "All" que limpa os filtros das categorias
-  - Caso as receitas sejam de bebida deve existir a opção chamada "All" que limpa os filtros das categorias
-</details>
-
----
-
-### 22 - Implemente o filtro como um toggle, o qual se for selecionado novamente, o app deve retornar as receitas sem nenhum filtro
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Caso as receitas sejam de comida e o filtro seja selecionado novamente, deve-se retornar as 12 primeiras receitas sem filtro.
-  - Caso as receitas sejam de bebida e o filtro seja selecionado novamente, deve-se retornar as 12 primeiras receitas sem filtro.
+   - If the recipes are food and the category is "Beef", you must upload the first 12 recipes from the "Beef" category
+   - If the recipes are for food and the category is "Breakfast", you must upload the first 12 recipes from the "Breakfast" category
+   - If the recipes are food and the category is "Chicken", you must upload the first 12 recipes from the "Chicken" category
+   - If the recipes are for food and the category is "Dessert", you must upload the first 12 recipes from the "Dessert" category
+   - If the recipes are for food and the category is "Goat", you must load the first 12 recipes from the "Goat" category
+   - If the recipes are drinks and the category is "Ordinary Drink", you must upload the first 12 recipes from the "Ordinary Drink" category
+   - If the recipes are drinks and the category is "Cocktail", you must upload the first 12 recipes from the "Cocktail" category
+   - If the recipes are drinks and the category is "Shake", you must upload the first 12 recipes from the "Shake" category
+   - If the recipes are drinks and the category is "Other/Unknown", you must upload the first 12 recipes from the "Other/Unknown" category
+   - If the recipes are drinks and the category is "Cocoa", you must upload the first 12 recipes from the "Cocoa" category
+   - If the recipes are for food, there must be an option called "All" that clears the category filters
+   - If the recipes are for drinks, there must be an option called "All" that clears the category filters
 </details>
 
 ---
 
-### 23 - Redirecione a pessoa usuária ao clicar no card para a tela de detalhes, que deve mudar a rota e conter o id da receita na URL
-
- > Este requisito também inclui testes de cobertura da página `Recipes.js`.
+### 22 - Implement the filter as a toggle, which if selected again, the app should return the recipes without any filter
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  * Caso a receita seja de uma comida, a pessoa deve ser redirecionada para a rota `/meals/:id-da-receita`
-  * Caso a receita seja de uma bebida, a pessoa deve ser redirecionada para a rota `/drinks/:id-da-receita`
-</details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Caso as receitas sejam de comida a rota deve mudar para a tela de detalhes da receita
-  - Caso as receitas sejam de bebida a rota deve mudar para a tela de detalhes da receita
-  - Verifica a cobertura de 90% da tela de Receitas
+   - If the recipes are for food and the filter is selected again, the first 12 recipes without filter must be returned.
+   - If the recipes are drinks and the filter is selected again, the first 12 recipes without a filter must be returned.
 </details>
 
 ---
 
-## Tela de detalhes de uma receita
+### 23 - Redirect the user by clicking on the card to the details screen, which must change the route and contain the recipe ID in the URL
 
-> ⚠️ Observações:
+  > This requirement also includes coverage testing of the `Recipes.js` page.
+
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
+
+   * If the recipe is for a food, the person must be redirected to the route `/meals/:id-da-receita`
+   * If the recipe is for a drink, the person must be redirected to the route `/drinks/:id-da-receita`
+</details>
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - If the recipes are for food, the route must change to the recipe details screen
+   - If the recipes are for drinks, the route must change to the recipe details screen
+   - Checks 90% coverage of the Recipes screen
+</details>
+
+---
+
+## Recipe details screen
+
+> ⚠️ Observations:
 >
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `RecipeDetails.js`.
-> - 🔗 As rotas usadas para essa tela devem ser `/meals/:id-da-receita` e `/drinks/:id-da-receita`.
+> - 📁 For the tests to pass, the component must be called `RecipeDetails.js`.
+> - 🔗 The routes used for this screen must be `/meals/:id-da-receita` and `/drinks/:id-da-receita`.
 
-:bulb: **Dica:** lembre-se de componentizar muito bem os elementos em React nessa tela evitando assim problemas de lógica e de complexidade ;).
+:bulb: **Tip:** remember to componentize the React elements very well on this screen, thus avoiding logic and complexity problems ;).
 
 
-### 24 - Realize uma request para a API passando o `id` da receita que deve estar disponível nos parâmetros da URL
+### 24 - Make a request to the API passing the `id` of the recipe which must be available in the URL parameters
 
 <details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Para verificar se a requisição para a API de comidas foi realizada, o endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/lookup.php?i={id-da-receita}`;
-  * Para verificar se a requisição para a API de bebidas foi realizada, o endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i={id-da-receita}`.
+   * To check whether the request to the food API was made, the endpoint used must be `https://www.themealdb.com/api/json/v1/1/lookup.php?i={id-da-receita }`;
+   * To check whether the request to the drinks API was made, the endpoint used must be `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i={id-da-receita }`.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se a requisição para a API de comidas foi realizada.
-  - Se a requisição para a API de bebidas foi realizada.
+   <summary><strong>What will be checked</strong></summary>
+   - If the request to the food API was made.
+   - If the request for the drinks API was made.
 </details>
 
 ---
 
-### 25 - Desenvolva a tela de modo que contenha uma imagem da receita, o título, a categoria em caso de comidas e se é ou não alcoólico em caso de bebidas, uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube incorporado e recomendações
+### 25 - Develop the screen so that it contains an image of the recipe, the title, the category in the case of food and whether or not it is alcoholic in the case of drinks, a list of ingredients followed by quantities, instructions, a video of the embedded youtube and recommendations
 
 <details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  A verificação será feita por meio das receitas retornadas pela API, como por exemplo: o texto dos ingredientes e das instruções, a partir dos atributos data-testids:
+   Verification will be done using the recipes returned by the API, such as: the text of the ingredients and instructions, using the data-testids attributes:
 
-  * A foto deve possuir o atributo `data-testid="recipe-photo"`;
-  * O título deve possuir o atributo `data-testid="recipe-title"`;
-  * O texto da categoria deve possuir o atributo `data-testid="recipe-category"`;
-  * Os ingredientes devem possuir o atributo `data-testid="${index}-ingredient-name-and-measure"`;
-  * O texto de instruções deve possuir o atributo `data-testid="instructions"`;
-  * O vídeo, presente somente na tela de comidas, deve possuir o atributo `data-testid="video"`;
+   * The photo must have the attribute `data-testid="recipe-photo"`;
+   * The title must have the attribute `data-testid="recipe-title"`;
+   * The category text must have the attribute `data-testid="recipe-category"`;
+   * Ingredients must have the attribute `data-testid="${index}-ingredient-name-and-measure"`;
+   * The instruction text must have the `data-testid="instructions"` attribute;
+   * The video, present only on the food screen, must have the attribute `data-testid="video"`;
   
-  Lembre-se: O vídeo do youtube só deve estar disponível para receitas de comida, visto que não é retornado pela [API de bebidas](https://www.thecocktaildb.com/api.php).
+   Remember: YouTube video should only be available for food recipes, as it is not returned by the [Drinks API](https://www.thecocktaildb.com/api.php).
   
-  :bulb: Dica: Faça uma busca sobre `how to embed youtube video` veja algumas sugestões de pesquisa para te ajudar na construção do código.
+   :bulb: Tip: Do a search on `how to embed youtube video` and see some search suggestions to help you build the code.
 
 </details>
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se a tela de comida possui todos os atributos data-testid
-  - Se a tela de bebidas possui todos os atributos data-testid
+   - Whether the food screen has all data-testid attributes
+   - Whether the drinks screen has all data-testid attributes
 </details>
 
 ---
 
-### 26 - Implemente as recomendações. Para receitas de comida, a recomendação deverá ser bebida, já para as receitas de bebida a recomendação deverá ser comida
+### 26 - Implement the recommendations. For food recipes, the recommendation must be drink, while for drink recipes the recommendation must be food
 
 <details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Você deverá realizar as requisições para as APIs de comidas e bebidas, e armazenar os dados, eles serão utilizadas posteriormente no requisito 27 para gerar as recomendações.
-  * Na página de comidas realize uma requisição para a API de bebidas, o endpoint utilizado deve ser `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
-  * Na página de bebidas realize uma requisição para a API de comidas, o endpoint utilizado deve ser `https://www.themealdb.com/api/json/v1/1/search.php?s=`.
+   * You must make requests to the food and beverage APIs, and store the data, which will be used later in requirement 27 to generate recommendations.
+   * On the food page, make a request to the drinks API, the endpoint used must be `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
+   * On the drinks page, make a request to the food API, the endpoint used must be `https://www.themealdb.com/api/json/v1/1/search.php?s=`.
 </details>
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se na página de comida a requisição para a API de bebidas foi realizada.
-  - Se na página de bebidas a requisição para a API de comidas foi realizada.
+   - If the request for the drinks API was made on the food page.
+   - If the request for the food API was made on the drinks page.
 </details>
 
 ---
 
-### 27 - Implemente os 6 cards de recomendação, mostrando apenas 2. O scroll é horizontal, similar a um `carousel`
+### 27 - Implement the 6 recommendation cards, showing only 2. The scroll is horizontal, similar to a `carousel`
 
 <details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Renderize apenas as 6 receitas recomendadas;
-    * Apenas 2 receitas devem ser visíveis, com um scroll horizontal, similar a um `carousel`
-  * O card de receitas recomendadas deve possuir o atributo `data-testid="${index}-recommendation-card"`;
-    * Dentro do card o nome da receita recomendada deve possuir o atributo `data-testid="${index}-recommendation-title"`;
+   * Render only the 6 recommended recipes;
+     * Only 2 recipes must be visible, with a horizontal scroll, similar to a `carousel`
+   * The recommended recipe card must have the attribute `data-testid="${index}-recommendation-card"`;
+     * Within the card, the name of the recommended recipe must have the attribute `data-testid="${index}-recommendation-title"`;
 </details>
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se são visíveis apenas duas recomendações por vez na tela;
-  - Se o scroll do carousel é feito na horizontal;
-  - Se existem todas as 6 recomendações na tela de detalhes de uma comida
-  - Se existem todas as 6 recomendações na tela de detalhes de uma bebida
+   - If only two recommendations are visible on the screen at a time;
+   - If the carousel scrolls horizontally;
+   - Whether there are all 6 recommendations in the details screen of a food
+   - Whether all 6 recommendations exist in the details screen of a drink
 </details>
 
 ---
 
-### 28 - Desenvolva um botão de nome "Start Recipe" que deve ficar fixo na parte de baixo da tela o tempo todo
+### 28 - Develop a button called "Start Recipe" that should remain fixed at the bottom of the screen at all times
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * O botão de iniciar receita deve possuir o atributo `data-testid="start-recipe-btn"`;
+   * The start recipe button must have the attribute `data-testid="start-recipe-btn"`;
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se o botão possui o atributo data-testid.
-  - O posicionamento do botão na tela de detalhes de comida.
-  - O posicionamento do botão na tela de detalhes de bebida.
-</details>
-
----
-
-### 29 - Implemente a solução de forma que, caso a receita já tenha sido feita, o botão "Start Recipe" desapareça
-
-> Este requisito também inclui testes de cobertura da página `RecipeDetails.js`.
-
-<br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
-
-  * Lembre-se que as receitas `finalizadas` anteriormente estão salvas na chave `doneRecipes` assim como indicado na sessão localStorage.
-      * A chave `doneRecipes` só será populada pela aplicação quando o botão "Finish Recipe" for implementado, mas não é necessário implementar o botão para que este requisito passe no avaliador!
-      * Caso o botão "Finish Recipe" ainda não esteja implementado, você pode utilizar como base a estrutura da chave `doneRecipes` que é informada na sessão `Desenvolvimento > Observações técnicas > LocalStorage` do readme.
-      * Você pode usar o próprio avaliador para testar o funcionamento, mas também pode popular manualmente a chave `doneRecipes` e testar manualmente.
-</details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se o botão de iniciar receita não é visível na tela de detalhes de uma comida.
-  - Se o botão de iniciar receita não é visível na tela de detalhes de uma bebida.
-  - Verifica a cobertura de 45% da tela detalhes de uma receita.
+   - If the button has the data-testid attribute.
+   - The positioning of the button on the food details screen.
+   - The positioning of the button on the drink details screen.
 </details>
 
 ---
 
-### 30 - Implemente a solução de modo que, caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser "Continue Recipe"
+### 29 - Implement the solution so that, if the recipe has already been made, the "Start Recipe" button disappears
+> This requirement also includes coverage testing of the `RecipeDetails.js` page.
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Lembre-se que as receitas `iniciadas` anteriormente estão salvas na chave `inProgressRecipes` assim como indicado na sessão localStorage.
-      * A chave `inProgressRecipes` só será populada pela aplicação no requisito `40`, mas não é necessário implementar o requisito `40` para este requisito passar no avaliador!
-      * Caso o requisito `40` ainda não esteja implementado, você pode utilizar como base a estrutura da chave `inProgressRecipes` que é informada na sessão `Desenvolvimento > Observações técnicas > LocalStorage` do readme.
-      * Você poderá testar o funcionamento com o próprio avaliador e também pode popular manualmente a chave `inProgressRecipes` para testar manualmente.
+   * Remember that previously `finished` recipes are saved in the `doneRecipes` key as indicated in the localStorage session.
+       * The `doneRecipes` key will only be populated by the application when the "Finish Recipe" button is implemented, but it is not necessary to implement the button for this requirement to pass the evaluator!
+       * If the "Finish Recipe" button is not yet implemented, you can use as a basis the structure of the `doneRecipes` key that is informed in the `Development > Technical observations > LocalStorage` section of the readme.
+       * You can use the evaluator itself to test how it works, but you can also manually populate the `doneRecipes` key and test manually.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - O botão de "Continue Recipe" na tela de detalhes de uma comida.
-  - O botão de "Continue Recipe" na tela de detalhes de uma bebida.
-</details>
-
----
-
-### 31 - Redirecione a pessoa usuária caso o botão "Start Recipe" seja clicado, a rota deve mudar para a tela de receita em progresso
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se redireciona para tela de receita da bebida em progresso.
-  - Se redireciona para tela de receita da comida em progresso.
+   - If the start recipe button is not visible on the details screen of a food.
+   - If the start recipe button is not visible on the details screen of a drink.
+   - Checks coverage of 45% of the details screen of a recipe.
 </details>
 
 ---
 
-### 32 - Implemente um botão de compartilhar e um de favoritar a receita
+### 30 - Implement the solution so that, if the recipe has been started but not finished, the button text should be "Continue Recipe"
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * O botão de compartilhar deve possuir o atributo `data-testid="share-btn"`;
-  * O botão de favoritar deve possuir o atributo `data-testid="favorite-btn"`;
+   * Remember that previously `started` recipes are saved in the `inProgressRecipes` key as indicated in the localStorage session.
+       * The `inProgressRecipes` key will only be populated by the application in requirement `40`, but it is not necessary to implement requirement `40` for this requirement to pass the evaluator!
+       * If requirement `40` is not yet implemented, you can use as a basis the `inProgressRecipes` key structure that is informed in the `Development > Technical Notes > LocalStorage` section of the readme.
+       * You can test the operation with the evaluator itself and you can also manually populate the `inProgressRecipes` key to test manually.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se os botões estão disponíveis na tela de detalhes de uma comida.
-  - Se os botões estão disponíveis na tela de detalhes de uma bebida.
-</details>
-
----
-
-### 33 - Implemente a solução de forma que, ao clicar no botão de compartilhar, o link de detalhes da receita deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer na tela em uma tag HTML
-
-<br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
-
-  * O avaliador não irá levar em consideração as mensagens exibidas pelo `global.alert`, você deverá exibir ela no html.
-  * O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
-  * Para esse requisito você precisará usar a biblioteca clipboard-copy. Para mais informações, consulte a [documentação da biblioteca](https://www.npmjs.com/package/clipboard-copy).
-</details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se a mensagem "Link copied!" aparece na tela dentro de uma tag HTML e se o link de detalhes receita da comida foi copiado para o clipboard.
-  - Se a mensagem "Link copied!" aparece na tela dentro de uma tag HTML e se o link de detalhes receita da bebida foi copiado para o clipboard.
+   - The "Continue Recipe" button on the food details screen.
+   - The "Continue Recipe" button on a drink's details screen.
 </details>
 
 ---
 
-### 34 - Salve as receitas favoritas no `localStorage` na chave `favoriteRecipes`
+### 31 - Redirect the user if the "Start Recipe" button is clicked, the route should change to the recipe in progress screen
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  * Lembre-se que as receitas `favoritadas` anteriormente estão salvas na chave `favoriteRecipes` assim como indicado na sessão localStorage.
-  * As receitas favoritas devem ser salvas no `localStorage` na chave `favoriteRecipes` no formato `[{ id, type, nationality, category, alcoholicOrNot, name, image }]`.
-</details>
-
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Verifica se após favoritar a receita de uma comida, ela é salva corretamente no localStorage
-  - Verifica se após favoritar a receita de uma bebida, ela é salva corretamente no localStorage
+   - Redirects to the drink recipe screen in progress.
+   - Redirects to the recipe screen for the food in progress.
 </details>
 
 ---
 
-### 35 - Implemente o ícone do coração (favorito) de modo que: deve vir preenchido caso a receita esteja favoritada e vazio caso contrário
+### 32 - Implement a share button and a favorite button for the recipe
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Os ícones dos botões podem ser encontrados em `src/images/whiteHeartIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
+   * The share button must have the `data-testid="share-btn"` attribute;
+   * The favorite button must have the attribute `data-testid="favorite-btn"`;
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se a comida favoritada vem com o coração preenchido.
-  - Se a comida não favoritada vem com o coração vazio.
-  - Se a bebida favoritada vem com o coração preenchido.
-  - Se a bebida não favoritada vem com o coração vazio.
+   - Whether the buttons are available on the food details screen.
+   - Whether buttons are available on a drink's details screen.
+</details>
+
+---
+### 33 - Implement the solution so that, when clicking the share button, the recipe details link should be copied to the clipboard and a message warning that the link has been copied should appear on the screen in an HTML tag
+
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
+
+   * The evaluator will not take into account the messages displayed by `global.alert`, you must display it in the html.
+   * The share button icon can be found in `src/images/shareIcon.svg`.
+   * For this requirement you will need to use the clipboard-copy library. For more information, see the [library documentation](https://www.npmjs.com/package/clipboard-copy).
+</details>
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - If the message "Link copied!" appears on the screen within an HTML tag and the food recipe details link has been copied to the clipboard.
+   - If the message "Link copied!" appears on the screen within an HTML tag and whether the drink recipe details link has been copied to the clipboard.
 </details>
 
 ---
 
-### 36 - Implemente a lógica no botão de favoritar. Caso seja clicado, o ícone do coração deve mudar seu estado atual, caso esteja preenchido deve mudar para vazio e vice-versa
-
-> Este requisito também inclui testes de cobertura da página `RecipeDetails.js`.
+### 34 - Save favorite recipes to `localStorage` in the `favoriteRecipes` key
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  - Favorita a comida
-  - Desfavorita a comida
-  - Favorita a bebida
-  - Desfavorita a bebida
-  - Verifica a cobertura de 90% da tela detalhes de uma receita
+   * Remember that previously `favorite` recipes are saved in the `favoriteRecipes` key as indicated in the localStorage section.
+   * Favorite recipes must be saved in `localStorage` in the `favoriteRecipes` key in the format `[{ id, type, nationality, category, alcoholicOrNot, name, image }]`.
+</details>
+
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - Checks that after you favorite a food recipe, it is saved correctly in localStorage
+   - Checks if after favorite a drink recipe, it is saved correctly in localStorage
+</details>
+
+---
+
+### 35 - Implement the heart icon (favorite) so that: it must be filled in if the recipe is favorited and empty otherwise
+
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
+
+   * Button icons can be found in `src/images/whiteHeartIcon.svg` and `src/images/blackHeartIcon.svg` respectively.
+</details>
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - If your favorite food comes with a full heart.
+   - If the non-favorite food comes with an empty heart.
+   - If your favorite drink comes with a full heart.
+   - If the non-favorite drink comes with an empty heart.
+</details>
+
+---
+
+### 36 - Implement logic in the favorite button. If clicked, the heart icon should change its current state, if it is filled it should change to empty and vice versa
+
+> This requirement also includes coverage testing of the `RecipeDetails.js` page.
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - Favorite food
+   - Disfavors food
+   - Favorite drink
+   - Disfavors the drink
+   - Checks coverage of 90% of the details screen of a recipe
 </details>
 
 ---
 
 
 
-## Tela de receita em progresso
+## Recipe in progress screen
 
-> ⚠️ Observações:
+> ⚠️ Observations:
 >
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `RecipeInProgress.js`.
-> - 🔗 As rotas usadas para essa tela devem ser `/meals/:id-da-receita/in-progress` e `/drinks/:id-da-receita/in-progress`.
+> - 📁 For the tests to pass, the component must be called `RecipeInProgress.js`.
+> - 🔗 The routes used for this screen must be `/meals/:id-da-receita/in-progress` and `/drinks/:id-da-receita/in-progress`.
 
-:bulb: **Dica:** lembre-se de componentizar muito bem os elementos em React nessa tela, evitando assim problemas de lógica e de complexidade ;).
+:bulb: **Tip:** remember to componentize the React elements very well on this screen, thus avoiding logic and complexity problems ;).
 
-### 37 - Desenvolva a tela de modo que contenha uma imagem da receita, o título, a categoria em caso de comidas e se é ou não alcoólico em caso de bebidas, uma lista de ingredientes com suas respectivas quantidades e instruções
+### 37 - Develop the screen so that it contains an image of the recipe, the title, the category in the case of food and whether or not it is alcoholic in the case of drinks, a list of ingredients with their respective quantities and instructions
 
 <details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  Verifica se os atributos data-testid estão presentes na tela:
+   Checks if the data-testid attributes are present on the screen:
 
-  * A foto deve possuir o atributo `data-testid="recipe-photo"`;
-  * O título deve possuir o atributo `data-testid="recipe-title"`;
-  * O botão de compartilhar deve possuir o atributo `data-testid="share-btn"`;
-  * O botão de favoritar deve possuir o atributo `data-testid="favorite-btn"`;
-  * O texto da categoria deve possuir o atributo `data-testid="recipe-category"`;
-  * O elemento de instruções deve possuir o atributo `data-testid="instructions"`;
-  * O botão para finalizar a receita deve possuir o atributo `data-testid="finish-recipe-btn"`.
+   * The photo must have the attribute `data-testid="recipe-photo"`;
+   * The title must have the attribute `data-testid="recipe-title"`;
+   * The share button must have the `data-testid="share-btn"` attribute;
+   * The favorite button must have the attribute `data-testid="favorite-btn"`;
+   * The category text must have the attribute `data-testid="recipe-category"`;
+   * The instructions element must have the `data-testid="instructions"` attribute;
+   * The button to finish the recipe must have the attribute `data-testid="finish-recipe-btn"`.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Os elementos de uma receita de comida.
-  - Os elementos de uma receita de bebida.
+   - The elements of a food recipe.
+   - The elements of a drink recipe.
 </details>
 
 ---
 
-### 38 - Desenvolva um checkbox para cada item da lista de ingredientes
+### 38 - Develop a checkbox for each item on the ingredients list
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
-  Verifica se os atributos data-testid estão presentes na tela com suas respectivas quantidades:
+   <summary><strong>Technical observations</strong></summary>
+   Checks whether the data-testid attributes are present on the screen with their respective quantities:
   
-  * Os ingredientes deverão ser exibidos em uma label;
-    * Cada label deve possuir o atributo `data-testid=${index}-ingredient-step`
-    * Dentro de cada label deverá existir um input checkbox.
+   * Ingredients must be displayed on a label;
+     * Each label must have the attribute `data-testid=${index}-ingredient-step`
+     * Within each label there must be an input box.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se todos os ingredientes estão sendo exibidos corretamente.
-  - Se cada ingrediente de uma receita de comida/bebida possui um checkbox.
+   - Whether all ingredients are being displayed correctly.
+   - Whether each ingredient in a food/drink recipe has a checkbox.
 </details>
 
 ---
 
-### 39 - Implemente uma lógica que ao clicar no checkbox de um ingrediente, o nome dele deve ser "riscado" da lista
+### 39 - Implement logic that when clicking on an ingredient's checkbox, its name must be "crossed out" from the list
 
-> Este requisito também inclui testes de cobertura da página `RecipeInProgress.js`.
+> This requirement also includes coverage testing of the `RecipeInProgress.js` page.
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
   
-  * Ao clicar no checkbox, o item deve ser riscado mostrando assim que esse passo foi finalizado.
-    * `text-decoration: line-through solid rgb(0, 0, 0)`
+   * When clicking on the checkbox, the item must be crossed out, thus showing that this step has been completed.
+     * `text-decoration: line-through solid rgb(0, 0, 0)`
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se é possível marcar todos os passos da receita de comida.
-  - Se é possível marcar todos os passos da receita de bebida.
-  - Verifica a cobertura de 45% da tela de receita em progresso.
+   - Whether it is possible to mark all the steps of the food recipe.
+   - Whether it is possible to mark all the steps of the drink recipe.
+   - Checks 45% coverage of the recipe screen in progress.
 </details>
 
 ---
 
-### 40 - Salve o estado do progresso, que deve ser mantido caso a pessoa atualize a página ou volte para a mesma receita
+### 40 - Save the progress status, which must be maintained if the person refreshes the page or returns to the same recipe
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
   
-  * Após clicar no checkbox em um dos ingredientes da receita, é esperado que o ingrediente permaneça marcado após a página recarregar. Para isso desenvolva a lógica de verificação de acordo com a chave `inProgressRecipes` no localStorage.
+   * After clicking the checkbox on one of the recipe ingredients, it is expected that the ingredient will remain marked after the page reloads. To do this, develop the verification logic according to the `inProgressRecipes` key in localStorage.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se salva o progresso de uma receita de comida em andamento.
-  - Se salva o progresso de uma receita de bebida em andamento.
-</details>
-
----
-
-### 41 - Desenvolva a lógica de favoritar e compartilhar. A lógica da tela de detalhes de uma receita se aplica aqui
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se os botões estão disponíveis na tela de detalhes de uma comida.
-  - Se os botões estão disponíveis na tela de detalhes de uma bebida.
-  - A mensagem "Link copied!" e se o link da receita da comida foi copiado para o clipboard.
-  - Verifica a mensagem "Link copied!" e se o link da receita da bebida foi copiado para o clipboard.
-  - Verifica comida favoritada.
-  - Verifica comida não favoritada.
-  - Verifica bebida favoritada.
-  - Verifica bebida não favoritada.
-  - Favorita comida.
-  - Desfavorita comida.
-  - Favorita bebida.
-  - Desfavorita bebida.
-  - Favorita receita de uma comida.
-  - Favorita receita de uma bebida.
+   - The progress of a food recipe in progress is saved.
+   - The progress of a drink recipe in progress is saved.
 </details>
 
 ---
 
-### 42 - Implemente a solução de modo que o botão de finalizar receita ("Finish Recipe") só pode estar habilitado quando todos os ingredientes estiverem _"checkados"_ (marcados)
+### 41 - Develop the logic for favorites and sharing. The logic of a recipe details screen applies here
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
+
+   - Whether the buttons are available on the food details screen.
+   - Whether buttons are available on a drink's details screen.
+   - The message "Link copied!" and whether the food recipe link was copied to the clipboard.
+   - Check the message "Link copied!" and whether the drink recipe link was copied to the clipboard.
+   - Check favorite food.
+   - Check unfavorite food.
+   - Check favorite drink.
+   - Check non-favorite drink.
+   - Favorite food.
+   - Disfavors food.
+   - Favorite drink.
+   - Disfavorite drink.
+   - Favorite food recipe.
+   - Favorite drink recipe.
+</details>
+
+---
+### 42 - Implement the solution so that the finish recipe button ("Finish Recipe") can only be enabled when all ingredients are _"checked"_ (marked)
+
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
   
-  * O botão deve ficar desabilitado enquanto todos os checkboxes não forem marcados. 
-  * O botão deve ficar fixo na parte de baixo da tela o tempo todo, semelhante ao botão de "Start Recipe".
+   * The button must be disabled until all checkboxes are checked.
+   * The button must remain fixed at the bottom of the screen at all times, similar to the "Start Recipe" button.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se o botão para finalizar está desabilitado em receitas de comidas.
-  - Se o botão para finalizar está desabilitado em receitas de bebidas.
-  - Se o botão para finalizar está habilitado em receitas de comidas.
-  - Se o botão para finalizar está habilitado em receitas de bebidas.
+   - If the finish button is disabled in food recipes.
+   - If the finish button is disabled in drink recipes.
+   - If the finish button is enabled in food recipes.
+   - Whether the button to finish is enabled in drink recipes.
 </details>
 
 ---
 
-### 43 - Redirecione a pessoa usuária após clicar no botão de finalizar receita ("Finish Recipe"), para a página de receitas feitas, cuja rota deve ser `/done-recipes`
+### 43 - Redirect the user after clicking the finish recipe button ("Finish Recipe"), to the made recipes page, whose route must be `/done-recipes`
  
-> Este requisito também inclui testes de cobertura da página `RecipeInProgress.js`.
+> This requirement also includes coverage testing of the `RecipeInProgress.js` page.
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se redireciona após concluir uma receita de comida.
-  - Se redireciona após concluir uma receita de bebida.
-  - Se a receita é adicionada no localStorage, na chave `doneRecipes`, quando o botão "Finish Recipe" é clicado.
-  - Verifica a cobertura de 90% da tela de receita em progresso.
+   - Redirects itself after completing a food recipe.
+   - Redirects itself after completing a drink recipe.
+   - If the recipe is added to localStorage, in the `doneRecipes` key, when the "Finish Recipe" button is clicked.
+   - Checks 90% coverage of the recipe screen in progress.
 </details>
 
 ---
 
-## Tela de receitas feitas
+## Made recipes screen
 
-> ⚠️ Observações:
+> ⚠️ Observations:
 >
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `DoneRecipes.js`.
-> - 🔗 A rota usada para essa tela deve ser `/done-recipes`.
+> - 📁 For the tests to pass, the component must be called `DoneRecipes.js`.
+> - 🔗 The route used for this screen must be `/done-recipes`.
 
-### 44 - Implemente os elementos da tela de receitas feitas respeitando os atributos descritos no protótipo
+### 44 - Implement the elements of the recipe screen made respecting the attributes described in the prototype
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  > Obs: Lembre-se que as receitas feitas estão salvas no `localStorage` na chave `doneRecipes`, leia a seção `localStorage` para mais detalhes.
+   > Note: Remember that the recipes made are saved in `localStorage` in the `doneRecipes` key, read the `localStorage` section for more details.
 
-  * Todos os data-testids estão presentes:
-    * O botão de filtro `All` deve ter o atributo `data-testid="filter-by-all-btn"`;
-    * O botão de filtro `Meals` deve ter o atributo `data-testid="filter-by-meal-btn"`;
-    * O botão de `Drinks` deve ter o atributo `data-testid="filter-by-drink-btn"`;
-    * A imagem do card de receita deve ter o atributo `data-testid="${index}-horizontal-image"`;
-    * O texto da categoria da receita deve ter o atributo `data-testid="${index}-horizontal-top-text"`;
-    * O texto do nome da receita deve ter o atributo `data-testid="${index}-horizontal-name"`;
-    * O texto da data que a receita foi feita deve ter o atributo `data-testid="${index}-horizontal-done-date"`;
-    * O elemento de compartilhar a receita deve ter o atributo `data-testid="${index}-horizontal-share-btn"`;
-    * As `tags` da receita devem possuir o atributo `data-testid=${index}-${tagName}-horizontal-tag`;
+   * All data-testids are present:
+     * The `All` filter button must have the `data-testid="filter-by-all-btn"` attribute;
+     * The `Meals` filter button must have the `data-testid="filter-by-meal-btn"` attribute;
+     * The `Drinks` button must have the `data-testid="filter-by-drink-btn"` attribute;
+     * The recipe card image must have the attribute `data-testid="${index}-horizontal-image"`;
+     * The recipe category text must have the attribute `data-testid="${index}-horizontal-top-text"`;
+     * The text of the recipe name must have the attribute `data-testid="${index}-horizontal-name"`;
+     * The text of the date the recipe was made must have the attribute `data-testid="${index}-horizontal-done-date"`;
+     * The recipe sharing element must have the attribute `data-testid="${index}-horizontal-share-btn"`;
+     * Recipe tags must have the attribute `data-testid=${index}-${tagName}-horizontal-tag`;
 </details>
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se todos os data-testids estão disponíveis.
-</details>
-
----
-
-### 45 - Desenvolva a tela de modo que, caso a receita do card seja uma comida, ela deve possuir: a foto da receita, nome, categoria, nacionalidade, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar
-
-<br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
-
-  * A nacionalidade e a categoria devem ser exibidas no elemento com o atributo `data-testid="${index}-horizontal-top-text"`.
-    * O texto deverá estar neste formato: `${nationality} - ${category}`
-  * O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
-</details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se o card possui os atributos de uma comida:
-    - foto da receita;
-    - nome;
-    - categoria e nacionalidade;
-    - a data que a receita foi feita;
-    - 2 primeiras tags retornadas pela API;
-    - botão de compartilhar.
+   - Whether all data-testids are available.
 </details>
 
 ---
 
-### 46 - Desenvolva a tela de maneira que, caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar
-
-> Este requisito também inclui testes de cobertura da página `DoneRecipes.js`.
+### 45 - Develop the screen so that, if the card recipe is a food, it must have: the photo of the recipe, name, category, nationality, the date the person made the recipe, the first 2 tags returned by the API and a share button
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
+
+   * Nationality and category must be displayed in the element with the `data-testid="${index}-horizontal-top-text"` attribute.
+     * The text must be in this format: `${nationality} - ${category}`
+   * The share button icon can be found in `src/images/shareIcon.svg`.
+</details>
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - If the card has the attributes of a food:
+     - photo of the recipe;
+     - name;
+     - category and nationality;
+     - the date the recipe was made;
+     - 2 first tags returned by the API;
+     - share button.
+</details>
+
+---
+
+### 46 - Develop the screen so that, if the card recipe is a drink, it must have: the photo of the recipe, the name, whether it is alcoholic, the date on which the person made the recipe and a button to share
+
+> This requirement also includes coverage testing of the `DoneRecipes.js` page.
+
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
   
-  * A informação se a bebida é alcoólica deve ser exibida no elemento com o atributo `data-testid="${index}-horizontal-top-text"`. 
-  * O ícone do botão de compartilhar pode ser encontrado em `src/images/shareIcon.svg`.
+   * Information about whether the drink is alcoholic must be displayed in the element with the attribute `data-testid="${index}-horizontal-top-text"`.
+   * The share button icon can be found in `src/images/shareIcon.svg`.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se o card possui os atributos corretos de uma bebida:
-    - foto da receita;
-    - nome;
-    - se é alcoólica;
-    - a data que a receita foi feita;
-    - botão de compartilhar.
-  - Verifica a cobertura de 45% da Tela de receitas feitas
+   - If the card has the correct attributes of a drink:
+     - photo of the recipe;
+     - name;
+     - if you are alcoholic;
+     - the date the recipe was made;
+     - share button.
+   - Checks coverage of 45% of the Recipes Made Screen
 </details>
 
 ---
 
-### 47 - Desenvolva a solução de modo que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard
+### 47 - Design the solution so that the share button should copy the URL from the recipe details screen to the clipboard
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Ao clicar no botão de compartilhar deve aparecer a mensagem "Link copied!";
-  - Se a URL da tela de detalhes da receita é copiada para o clipboard.
+   - When you click on the share button, the message "Link copied!" should appear;
+   - Whether the recipe details screen URL is copied to the clipboard.
 </details>
 
 ---
 
-### 48 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros
+### 48 - Implement 2 buttons that filter recipes by food or drink and a third that removes all filters
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * Os nomes dos botões devem ser "Meals", "Drinks" e "All", respectivamente.
-  * Ao clicar no botão "Meals", as receitas devem ser filtradas por comidas;
-  * Ao clicar no botão "Drinks", as receitas devem ser filtradas por bebidas;
-  * Ao clicar no botão "All", o filtro deve ser removido.
+   * Button names should be "Meals", "Drinks" and "All", respectively.
+   * When clicking on the "Meals" button, recipes must be filtered by food;
+   * When clicking on the "Drinks" button, recipes must be filtered by drinks;
+   * When clicking the "All" button, the filter must be removed.
 </details>
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se ao clicar no botão "Meals", as receitas são filtradas por comidas;
-  - Se ao clicar no botão "Drinks", as receitas são filtradas por bebidas;
-  - Se ao clicar no botão "All", o filtro  é removido.
-</details>
-
----
-
-### 49 - Redirecione para a tela de detalhes da receita caso seja clicado na foto ou no nome da receita
-
-> Este requisito também inclui testes de cobertura da página `DoneRecipes.js`.
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se ao clicar na foto da receita, a rota  muda para a tela de detalhes daquela receita;
-  - Se ao clicar no nome da receita, a rota muda para a tela de detalhes daquela receita;
-  - Verifica a cobertura de 90% da Tela de receitas feitas.
+   - If you click on the "Meals" button, the recipes are filtered by food;
+   - If you click on the "Drinks" button, the recipes are filtered by drinks;
+   - If you click on the "All" button, the filter is removed.
 </details>
 
 ---
 
-## Tela de receitas favoritas
+### 49 - Redirect to the recipe details screen if the photo or recipe name is clicked
 
-> ⚠️ Observações:
+> This requirement also includes coverage testing of the `DoneRecipes.js` page.
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - If you click on the photo of the recipe, the route changes to the details screen for that recipe;
+   - If you click on the name of the recipe, the route changes to the details screen for that recipe;
+   - Checks coverage of 90% of the made recipes screen.
+</details>
+
+---
+
+## Favorite recipes screen
+
+> ⚠️ Observations:
 >
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `FavoriteRecipes.js`.
-> - 🔗 A rota usada para essa tela deve ser `/favorite-recipes`.
+> - 📁 For the tests to pass, the component must be called `FavoriteRecipes.js`.
+> - 🔗 The route used for this screen must be `/favorite-recipes`.
 
-### 50 - Implemente os elementos da tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas), respeitando os atributos descritos no protótipo
-
-<br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
-
-  > Obs: Lembre-se que as receitas feitas estão salvas no `localStorage` na chave `favoriteRecipes`, leia a seção `localStorage` para mais detalhes.
-
-    * Todos os data-testids estão presentes:
-    * O botão de filtro `All` deve ter o atributo `data-testid="filter-by-all-btn"`;
-    * O botão de filtro `Meals` deve ter o atributo `data-testid="filter-by-meal-btn"`;
-    * O botão de `Drinks` deve ter o atributo `data-testid="filter-by-drink-btn"`;
-    * A imagem do card de receita deve ter o atributo `data-testid="${index}-horizontal-image"`;
-    * O texto da categoria da receita deve ter o atributo `data-testid="${index}-horizontal-top-text"`;
-    * O texto do nome da receita deve ter o atributo `data-testid="${index}-horizontal-name"`;
-    * O elemento de compartilhar a receita deve ter o atributo `data-testid="${index}-horizontal-share-btn"`;
-    * O elemento de favoritar a receita deve ter o atributo `data-testid="${index}-horizontal-favorite-btn"`;
-
-</details>
-
+### 50 - Implement the elements of the favorite recipes screen (cumulative with the attributes in common with the made recipes screen), respecting the attributes described in the prototype
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  - Se todos os data-testids estão disponíveis.
+   > Note: Remember that the recipes made are saved in `localStorage` in the `favoriteRecipes` key, read the `localStorage` section for more details.
+
+     * All data-testids are present:
+     * The `All` filter button must have the `data-testid="filter-by-all-btn"` attribute;
+     * The `Meals` filter button must have the `data-testid="filter-by-meal-btn"` attribute;
+     * The `Drinks` button must have the `data-testid="filter-by-drink-btn"` attribute;
+     * The recipe card image must have the attribute `data-testid="${index}-horizontal-image"`;
+     * The recipe category text must have the attribute `data-testid="${index}-horizontal-top-text"`;
+     * The text of the recipe name must have the attribute `data-testid="${index}-horizontal-name"`;
+     * The recipe sharing element must have the attribute `data-testid="${index}-horizontal-share-btn"`;
+     * The recipe favorite element must have the attribute `data-testid="${index}-horizontal-favorite-btn"`;
+     
+     </details>
+
+
+<br /><details>
+   <summary><strong>What will be checked</strong></summary>
+
+   - Whether all data-testids are available.
 </details>
 
 ---
 
-### 51 - Desenvolva a tela de modo que, caso a receita do card seja uma comida, ela deve possuir: a foto da receita,  nome, categoria, nacionalidade, um botão de compartilhar e um de "desfavoritar"
+### 51 - Develop the screen so that, if the card's recipe is a food, it must have: the photo of the recipe, name, category, nationality, a share button and a "unfavorite" button
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
   
-  * A nacionalidade e a categoria devem ser exibidas no elemento com o atributo `data-testid="${index}-horizontal-top-text"`.
-    * O texto deverá estar neste formato: `${nationality} - ${category}`
-  * Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
+   * Nationality and category must be displayed in the element with the `data-testid="${index}-horizontal-top-text"` attribute.
+     * The text must be in this format: `${nationality} - ${category}`
+   * Button icons can be found in `src/images/shareIcon.svg` and `src/images/blackHeartIcon.svg` respectively.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se o card possui os atributos de uma comida:
-    - foto da receita;
-    - nome;
-    - categoria e nacionalidade;
-    - botão de compartilhar;
-    - botão de favoritar.
+   - If the card has the attributes of a food:
+     - photo of the recipe;
+     - name;
+     - category and nationality;
+     - share button;
+     - favorite button.
 </details>
 
 ---
 
-### 52 - Desenvolva a tela de modo que, caso a receita do card seja uma bebida, ela deve possuir: a foto da receita,  nome, se é alcoólica ou não, um botão de compartilhar e um de "desfavoritar"
+### 52 - Develop the screen so that, if the card recipe is a drink, it must have: the photo of the recipe, name, whether it is alcoholic or not, a share button and a "unfavorite" button
 
-> Este requisito também inclui testes de cobertura da página `FavoriteRecipes.js`.
+> This requirement also includes coverage testing of the `FavoriteRecipes.js` page.
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
   
-  * A informação se a bebida é alcoólica deve ser exibida no elemento com o atributo `data-testid="${index}-horizontal-top-text"`. 
-  * Os ícones dos botões podem ser encontrados em `src/images/shareIcon.svg` e em `src/images/blackHeartIcon.svg`, respectivamente.
+   * Information about whether the drink is alcoholic must be displayed in the element with the attribute `data-testid="${index}-horizontal-top-text"`.
+   * Button icons can be found in `src/images/shareIcon.svg` and `src/images/blackHeartIcon.svg` respectively.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se o card possui os atributos corretos de uma bebida:
-    - foto da receita;
-    - nome;
-    - se é alcoólica;
-    - botão de compartilhar;
-    - botão de favoritar.
-  - Verifica a cobertura de 45% da tela de receitas favoritas.
-</details>
-
----
-
-### 53 - Desenvolva a solução de modo que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  - Se ao clicar no botão de compartilhar, aparece a mensagem "Link copied!";
-  - Se a URL da tela de detalhes da receita é copiada para o clipboard.
+   - If the card has the correct attributes of a drink:
+     - photo of the recipe;
+     - name;
+     - if you are alcoholic;
+     - share button;
+     - favorite button.
+   - Checks 45% coverage of the favorite recipes screen.
 </details>
 
 ---
 
-### 54 - Desenvolva a solução de modo que o botão de "desfavoritar" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela
+### 53 - Design the solution so that the share button should copy the URL from the recipe details screen to the clipboard
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se ao clicar no botão de "desfavoritar", a respectiva receita é removida da tela.
-  - Se ao clicar no botão de "desfavoritar", a respectiva receita é removida do `localStorage`.
+   - If when you click on the share button, the message "Link copied!" appears;
+   - Whether the recipe details screen URL is copied to the clipboard.
 </details>
 
 ---
 
-### 55 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros
+### 54 - Design the solution so that the "unfavorite" button should remove the recipe from the list of favorite recipes in `localStorage` and from the screen
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
+
+   - If you click on the "unfavorite" button, the respective recipe is removed from the screen.
+   - If you click on the "unfavorite" button, the respective recipe is removed from `localStorage`.
+</details>
+
+---
+
+### 55 - Implement 2 buttons that filter recipes by food or drink and a third that removes all filters
+
+<br /><details>
+   <summary><strong>Technical observations</strong></summary>
   
-  * Os nomes dos botões devem ser "Meals", "Drinks" e "All", respectivamente
+   *Button names should be "Meals", "Drinks" and "All" respectively
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se ao clicar no botão "Meals", as receitas devem ser filtradas por comidas;
-  - Se ao clicar no botão "Drinks" , as receitas devem ser filtradas por bebidas;
-  - Se ao clicar no botão "All", o filtro deve ser removido.
+   - If you click on the "Meals" button, the recipes must be filtered by food;
+   - If you click on the "Drinks" button, the recipes must be filtered by drinks;
+   - If clicking on the "All" button, the filter must be removed.
 </details>
 
 ---
 
-### 56 - Redirecione a pessoa usuária ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita
+### 56 - Redirect the user when clicking on the photo or name of the recipe, the route should change to the details screen for that recipe
 
-> Este requisito também inclui testes de cobertura da página `FavoriteRecipes.js`.
+> This requirement also includes coverage testing of the `FavoriteRecipes.js` page.
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita;
-  - Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita.
-  - Verifica a cobertura de 90% da Tela de receitas favoritas.
+   - When clicking on the photo of the recipe, the route should change to the details screen for that recipe;
+   - When clicking on the name of the recipe, the route should change to the details screen for that recipe.
+   - Checks 90% coverage of the Favorite Recipes Screen.
 </details>
 
 ---
 
 
 
-## Tela de perfil
+## Profile screen
 
-> ⚠️ Observações: 
-> 
-> - 📁 Para os testes passarem é necessário que o componente seja chamado de `Profile.js`.
-> - 🔗 A rota usada para essa tela deve ser `/profile`.
+> ⚠️ Observations:
+>
+> - 📁 For the tests to pass, the component must be called `Profile.js`.
+> - 🔗 The route used for this screen must be `/profile`.
 
-### 57 - Implemente os elementos da tela de perfil respeitando os atributos descritos no protótipo
+### 57 - Implement the profile screen elements respecting the attributes described in the prototype
 
 <br /><details>
-  <summary><strong>Observações técnicas</strong></summary>
+   <summary><strong>Technical observations</strong></summary>
 
-  * O elemento de email deve possuir o atributo `data-testid="profile-email"`;
-  * O botão para "Done Recipes" deve possuir o atributo `data-testid="profile-done-btn"`;
-  * O botão para "Favorite Recipes" deve possuir o atributo `data-testid="profile-favorite-btn"`;
-  * O botão de "Logout" deve possuir o atributo `data-testid="profile-logout-btn"`.
+   * The email element must have the `data-testid="profile-email"` attribute;
+   * The button for "Done Recipes" must have the attribute `data-testid="profile-done-btn"`;
+   * The button for "Favorite Recipes" must have the attribute `data-testid="profile-favorite-btn"`;
+   * The "Logout" button must have the `data-testid="profile-logout-btn"` attribute.
 </details>
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Todos o data-testid do email e de todos os botões.
+   - All data-testid of the email and all buttons.
 </details>
 
 ---
 
-### 58 - Implemente a solução de maneira que o e-mail da pessoa usuária deve estar visível
+### 58 - Implement the solution so that the user's email must be visible
   
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se o e-mail armazenado em localStorage está visível.
+   - Whether the email stored in localStorage is visible.
 </details>
 
 ---
 
-### 59 - Implemente 3 botões: um de nome "Done Recipes", um de nome "Favorite Recipes" e um de nome "Logout"
+### 59 - Implement 3 buttons: one named "Done Recipes", one named "Favorite Recipes" and one named "Logout"
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se a tela contêm todos os 3 botões.
+   - If the screen contains all 3 buttons.
 </details>
 
 ---
 
-### 60 - Redirecione a pessoa usuária que, ao clicar no botão de "Done Recipes", a rota deve mudar para a tela de receitas feitas
+### 60 - Redirect the user that, when clicking on the "Done Recipes" button, the route should change to the made recipes screen
 
-> Este requisito também inclui testes de cobertura do componente `Profile.js`.
+> This requirement also includes coverage tests for the `Profile.js` component.
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se redireciona para a rota correta.
-  - Verifica a cobertura de 45% do componente Profile.
+   - Redirects itself to the correct route.
+   - Verifies 45% coverage of the Profile component.
 </details>
 
 ---
 
-### 61 - Redirecione a pessoa usuária que, ao clicar no botão de "Favorite Recipes", a rota deve mudar para a tela de receitas favoritas
+### 61 - Redirect the user that, when clicking on the "Favorite Recipes" button, the route should change to the favorite recipes screen
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se redireciona para a rota correta.
+   - Redirects itself to the correct route.
 </details>
 
 ---
 
-### 62 - Redirecione a pessoa usuária que ao clicar no botão de "Logout", o `localStorage` deve ser limpo e a rota deve mudar para a tela de login
+### 62 - Redirect the user that when clicking on the "Logout" button, the `localStorage` must be cleared and the route must change to the login screen
 
-> Este requisito também inclui testes de cobertura do componente `Profile.js`.
+> This requirement also includes coverage tests for the `Profile.js` component.
 
 <br /><details>
-  <summary><strong>O que será verificado</strong></summary>
+   <summary><strong>What will be checked</strong></summary>
 
-  - Se limpa todas as chaves da localStorage;
-  - Se a rota muda para a tela de login.
-  - Verifica a cobertura de 90% do componente Profile.
+   - All localStorage keys are cleared;
+   - If the route changes to the login screen.
+   - Verifies 90% coverage of the Profile component.
 </details>
